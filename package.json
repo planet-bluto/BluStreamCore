@@ -1,0 +1,18 @@
+{
+  "name": "blustreamcore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "nodemon --exec ts-node src/main.ts"
+  },
+  "keywords": [],
+  "author": "PLANET_BLUTO",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.9.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
