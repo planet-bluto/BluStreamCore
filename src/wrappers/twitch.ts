@@ -17,7 +17,7 @@ authProvider.addIntentsToUser(process.env.CHANNEL_ID, ['chat'])
 
 
 //// APICLIENT
-import { ApiClient } from '@twurple/api'
+import { ApiClient, HelixChatBadgeSet } from '@twurple/api'
 export const apiClient = new ApiClient({ authProvider })
 
 
@@ -47,7 +47,8 @@ export async function twitchAutoMSG(text: string, replyTo: null | 2026 = null, i
 
 // Emote Parsing...
 import { EmoteFetcher, EmoteParser } from '@mkody/twitch-emoticons'
-import { parseChatCommand } from '../helpers/twitch_chat_commands'
+import { parseChatCommand } from '../workers/twitch_chat_commands'
+import { MessageHelper } from '../helpers/messages'
 
 const fetcher = new EmoteFetcher(undefined, undefined, {apiClient})
 const parser = new EmoteParser(fetcher, {
@@ -57,6 +58,7 @@ const parser = new EmoteParser(fetcher, {
     match: /(\w+)+?/g
 })
 
+// GET *MOST EMOTES
 Promise.all([
   // Twitch global
   // fetcher.fetchTwitchEmotes(),
@@ -80,12 +82,24 @@ Promise.all([
   // chatClient.onMessage(trackActivity)
 })
 
+// GET ALL BADGES
+let allBadges: HelixChatBadgeSet[] = []
+async function getAllBadges() {
+  var channelBadges = await apiClient.chat.getChannelBadges(process.env.CHANNEL_ID)
+  var globalBadges = await apiClient.chat.getGlobalBadges()
+  allBadges = channelBadges.concat(globalBadges)
+}
+
+getAllBadges()
+
+// CHAT PROCESSING
 var chatterIdCache: {[index: string]: string} = {}
 var chatterColorCache: {[index: string]: string} = {}
 function appendTwitchMessage(channel: string, user: string, text: string, msg: ChatMessage) {
   if (text.startsWith("!")) {return} // no slashies... >:(
 
-  let please_be_the_color = "#ffffff"
+  // Colors
+  let please_be_the_color = (msg.userInfo.color || "#ffffff")
   
   // TODO: Reliably get the color of the chatter
   // msg._raw.split(";").forEach((elem: string) => {
@@ -96,4 +110,25 @@ function appendTwitchMessage(channel: string, user: string, text: string, msg: C
 
   chatterColorCache[msg.userInfo.userId] = please_be_the_color
   chatterIdCache[msg.userInfo.userName] = msg.userInfo.userId
+
+  // Badges
+  var userBadges = Array.from(msg.userInfo.badges).map(badgeEntry => {
+    var badgeSet = allBadges.find(badgeSet => badgeSet.id == badgeEntry[0])
+    if (!badgeSet) { return null }
+    var badgeVersion = badgeSet.getVersion(badgeEntry[1])
+    if (!badgeVersion) { return null }
+    return badgeVersion.getImageUrl(2)
+  }).filter(badgeUrl => (badgeUrl != null))
+
+  // Forward to Socket!
+  MessageHelper.add({
+    header: msg.userInfo.userName,
+    content: msg.text,
+    badges: userBadges,
+    platform: "twitch",
+    style: {
+      header_color: please_be_the_color,
+      header_format: true
+    }
+  })
 }
