@@ -2,3 +2,4 @@
 
 .env
 /persist
+token_store.json
