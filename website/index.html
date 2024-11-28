@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>>PLANET_BLUTO STREAM PANEL</title>
+		<link href="icon.png" rel="icon" type="image/png" sizes="32x32" />
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<video id="PREVIEW_VIDEO" style="display: none;"></video>
+		<div id="main">
+			<div id="main-left">
+				<canvas id="zoom-input" class="zoom-display"></canvas>
+				<canvas id="zoom-preview" class="zoom-display"></canvas>
+				<div id="zoom-buttons">
+					<button id="zoom-button">ZOOM</button>
+					<button onclick="socket.emit('obs_zoom_preset', 'Blu')">BLU</button>
+					<button onclick="socket.emit('obs_zoom_preset', 'BluBot')">BLUBOT</button>
+					<button onclick="socket.emit('obs_zoom_preset', 'Screen')">SCREEN</button>
+					<button onclick="socket.emit('obs_zoom_preset', 'Time')">TIME</button>
+					<button onclick="socket.emit('obs_zoom_preset', 'Chat')">CHAT</button>
+				</div>
+			</div>
+			<div id="main-right"> 
+				<div id="right-top">
+					<div id="shoutouts">
+						<input placeholder="Shoutouts ID" class="dropdown-list-input" title="shoutouts-input" id="shoutouts-input" list="shoutouts-list"/>
+						<button id="shoutouts-button">Shoutouts!</button>
+						<datalist id="shoutouts-list"></datalist>
+
+						<input placeholder="Popup ID" class="dropdown-list-input" title="popup-input" id="popup-input" list="popup-list"/>
+						<button id="popup-button">Popup!</button>
+						<datalist id="popup-list"></datalist>
+						<!-- I ain't go no where else to put this... -->
+						<button id="end-screen-button">End Screen</button>
+					</div>
+					<div id="timeouts">
+					<div style="height: 100%"></div>
+					</div>
+					<div id="stream-form">
+						<p>HEADER</p>
+						<div id="stream-form-header-input-container">
+							<input placeholder="Emote" list="stream-form-header-emote-list" id="stream-form-header-emote" name="stream-form-header-emote" />
+							<datalist id="stream-form-header-emote-list">
+							</datalist>
+							<input aria-label="header" type="text" id="stream-form-header" />
+						</div>
+						<p>TITLE</p>
+						<input aria-label="title" type="text" id="stream-form-title" />
+						<p>CATEGORY</p>
+						<input aria-label="category" type="text" id="stream-form-category-search" />
+						<select name="categories" id="stream-form-category-select" size=10>
+							<optgroup label="Search Results" id="stream-form-category-search-results"></optgroup>
+							<optgroup label="Bookmarked Categories">
+								<option value="1469308723">Software & Game Development</option>
+								<option value="509658">Just Chatting</option>
+								<option value="27471">Minecraft</option>
+								<option value="18871">Mario Kart Wii</option>
+								<option value="941530474">Mario Kart 8</option>
+								<option value="504413385">SRB2 Kart</option>
+								<option value="1308655139">Dr Robotnik's Ring Racers</option>
+								<option value="330654616">Rivals 2</option>
+								<option value="488436">Rivals of Aether</option>
+								<option value="460316">Brawlhalla</option>
+							</optgroup>
+						</select>
+						<button id="stream-start-button">START STREAM</button>
+					</div>
+				</div>
+				<div id="right-bottom">
+					<div id="soundboards"></div>
+					<div id="expressions"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-------- SCRIPTS -------->
+
+		<!-- PACKAGES -->
+		<script src="blulib.js"></script>
+
+		<!-- SOURCE -->
+		<script src="/socket.io/socket.io.js"></script>
+
+		<!-- SOURCE -->
+		<script src="init.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>

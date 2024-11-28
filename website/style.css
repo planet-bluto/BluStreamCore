@@ -1,0 +1,226 @@
+@font-face {
+ font-family: Rubik Mono One;
+ src: url(assets/fonts/RubikMonoOne-Regular.ttf);
+}
+
+body {
+	display: flex;
+  flex-direction: column;
+	color: white;
+	font-family: Rubik Mono One;
+	background: #151515;
+	margin: 0px;
+	width: 100vw;
+	height: 100vh;
+}
+
+#main {
+	display: flex;
+	width: calc(100vw - 64px);
+	height: calc(100vh - 64px);
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	padding: 32px;
+}
+
+#main-left {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	/* grid-template-rows: calc(100% / 3) calc(100% / 3) calc(100% / 3); */
+	height: 100%;
+	gap: 15px;
+	justify-content: space-between;
+}
+
+.zoom-display {
+	/* display: flex; */
+	width: 100%;
+	height: auto;
+	min-height: auto;
+	/* background: lime; */
+	aspect-ratio: 16 / 9;
+	border-radius: 5px;
+}
+
+#zoom-buttons {
+	display: grid;
+	grid-template-columns: calc(50% - (15px / 2)) calc(50% - (15px / 2));
+	gap: 15px;
+	width: 100%;
+	justify-content: space-between;
+	align-content: space-between;
+}
+
+#zoom-buttons > button {
+	/* height: 100%; */
+	border: none;
+	border-radius: 15px;
+}
+
+#main-right {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	gap: 20px;
+}
+
+#right-top {
+	display: flex;
+	flex-direction: row;
+	height: 50%;
+	min-height: 30%;
+	gap: 15px;
+}
+
+#shoutouts {
+	/* display: grid; */
+	/* grid-template-columns: calc(50% - 5px) calc(50% - 5px); */
+	/* grid-auto-rows: 20%; */
+	width: calc(100% - 30px);
+	height: calc(100% - 30px);
+	max-height: 100%;
+	background: #252525;
+	border-radius: 15px;
+	/* overflow-y: scroll; */
+	/* overflow-x: hidden; */
+	/* grid-gap: 5px; */
+	padding: 15px;
+}
+
+#shoutouts > button {
+	border: none;
+	border-radius: 5px;
+	background-color: #024aca;
+	color: white;
+	font-size: 18px;
+	padding: 15px;
+	width: 100%;
+	margin-top: 15px;
+	border-radius: 24px;
+	font-family: 'Rubik Mono One';
+}
+
+.dropdown-list-input {
+	background: #353535;
+	border: none;
+	width: calc(100% - 20px);
+	height: 32px;
+	border-radius: 30px;
+	padding-left: 15px;
+	font-family: 'Comfortaa';
+	color: white;
+	font-weight: bolder;
+	font-size: 16px;
+}
+
+#popup-input {
+	margin-top: 15px;
+}
+
+#timeouts {
+	width: 100%;
+	background: #252525;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#timeouts > button {
+	border: none;
+	border-radius: 5px;
+	background: #353535;
+	color: white;
+}
+
+#stream-form {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+#stream-form > p {
+	font-size: 16px;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+}
+
+#stream-form-header-input-container {
+	display: flex;
+	gap: 15px;
+	width: 100%;
+}
+
+#stream-form-header {
+	width: 70%;
+}
+
+#stream-form-header-emote {
+	width: 30%;
+	border: none;
+	background: #252525;
+	border-radius: 15px;
+	color: white;
+	font-size: 18px;
+	font-family: 'Comfortaa';
+	font-weight: bolder;
+}
+
+#stream-form-category-select {
+	height: 100px;
+	border: none;
+	background: #252525;
+	color: white;
+	font-family: 'Comfortaa';
+	font-size: 14px;
+	overflow-x: hidden;
+	max-width: 100%;
+}
+
+#stream-start-button {
+	border: none;
+	background: #024aca;
+	border-radius: 15px;
+	height: 32px;
+	color: white;
+	font-family: 'Rubik Mono One';
+}
+
+#right-bottom {
+	display: flex;
+	flex-direction: row;
+	height: 50%;
+	min-height: 30%;
+	gap: 30px;
+}
+
+#soundboards {
+	width: 100%;
+	background: #252525;
+	border-radius: 15px;
+}
+
+#expressions {
+	width: 50%;
+	background: #252525;
+	border-radius: 15px;
+}
+
+input[type=text] {
+	border: none;
+	background: #252525;
+	color: white;
+	font-size: 18px;
+	font-family: 'Comfortaa';
+	border-radius: 15px;
+	padding-left: 15px;
+	height: 32px;
+	font-weight: bolder;
+}

@@ -1,7 +1,7 @@
 import { LocalStorage } from "node-localstorage";
 let localStorage = new LocalStorage('./persist/channel_points');
 
-import { apiClient } from "../wrappers/twitch";
+import { apiClient } from "./twitch";
 import { HelixCustomReward, HelixCreateCustomRewardData } from "@twurple/api";
 
 let CUSTOM_REWARDS: {[index: string]: TwitchChannelPointReward} = {}
@@ -27,12 +27,11 @@ export class TwitchChannelPointReward {
   }
 }
 
-import { EventSubWsListener } from '@twurple/eventsub-ws';
+import { twitchListener } from "./twitch"
 import { EventSubChannelRedemptionAddEvent } from '@twurple/eventsub-base';
-const listener = new EventSubWsListener({ apiClient })
-listener.start() 
+twitchListener.start() 
 
-listener.onChannelRedemptionAdd(process.env.CHANNEL_ID, async (event: EventSubChannelRedemptionAddEvent) => {
+twitchListener.onChannelRedemptionAdd(process.env.CHANNEL_ID, async (event: EventSubChannelRedemptionAddEvent) => {
   let rewardCodes = Object.keys(CUSTOM_REWARDS)
   let rewardCode = rewardCodes.find(code => (localStorage.getItem(code) == event.rewardId))
 
@@ -54,7 +53,6 @@ apiClient.channelPoints.getCustomRewards(process.env.CHANNEL_ID, true).then(asyn
 
   await rewards.awaitForEach(async (reward: HelixCustomReward) => {
     if (!rewardIDs.includes(reward.id)) {
-      print(`DIE!! (${reward.id} <-> ${rewardIDs})`)
       await apiClient.channelPoints.deleteCustomReward(process.env.CHANNEL_ID, reward.id)
     }
   })
@@ -79,7 +77,6 @@ async function customRewardCheck() {
     }
 
     let rewardID = localStorage.getItem(rewardCode)
-    print(`[${rewardCode}] id: `, rewardID)
     if (rewardID == null) {
       await makeReward()
     } else {

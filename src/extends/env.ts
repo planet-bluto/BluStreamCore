@@ -6,6 +6,7 @@ export interface IProcessEnv {
   TWITCH_CLIENT_SECRET: string;
 
   WEB_PORT: string;
+  OVERLAY_PORT: string;
 }
 
 declare global {

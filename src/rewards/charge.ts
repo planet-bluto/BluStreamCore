@@ -1,4 +1,4 @@
-import { TwitchChannelPointReward } from "../workers/channel_point_rewards";
+import { TwitchChannelPointReward } from "../modules/channel_point_rewards";
 import { EventSubChannelRedemptionAddEvent } from "@twurple/eventsub-base";
 
 export const ChargeReward = new TwitchChannelPointReward("CHARGE",

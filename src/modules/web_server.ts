@@ -1,8 +1,9 @@
 import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
+import { setDiscordSocket } from './discord';
 
-const app = express()
+export const app = express()
 const httpServer = createServer(app)
 
 let roomSetups: {[index: string]: Function} = {}
@@ -30,13 +31,20 @@ SocketIO.on('connection', (socket) => {
       bits.shift()
       let roomName = bits.join("_")
 
-      if (roomSetups[roomName]) { roomSetups[roomName](...args) }
+      if (roomSetups[roomName]) { roomSetups[roomName](socket, ...args) }
 
       socket.join(roomName)
     }
   })
+
+  socket.on("discord_identify", () => {
+    setDiscordSocket(socket)
+  })
 })
 
-httpServer.listen(process.env.WEB_PORT, () => {
-  console.log(`Listening: ${process.env.WEB_PORT}`)
-})
+
+export function startWebServer() {
+  httpServer.listen(process.env.WEB_PORT, () => {
+    console.log(`Listening: ${process.env.WEB_PORT}`)
+  })
+}
