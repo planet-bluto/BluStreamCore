@@ -1,0 +1,1946 @@
+[
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "Tyjiro",
+        "formatted_name": ">TYJIRO",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "PeskyKuriboh",
+        "formatted_name": ">PESKYKURIBOH",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "AceMimio",
+        "formatted_name": ">ACEMIMIO",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "cyburgloom",
+        "formatted_name": ">CYBURGLOOM",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "Tirsod",
+        "formatted_name": ">TIRSOD",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/55b2547a-5e12-4add-8106-29fd4141e4f2/blutoidle_outline.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=7876527cfd4a8d017f0242dd1f97c1f06a40be37306ca40e5a789c5cf79b1529&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "planet_bluto",
+        "artIds": [
+            "6e50f83c-1ddf-4f06-bff6-0693b5d50797",
+            "452e0e73-978d-48e2-ae80-f5e95069406d",
+            "67bff758-af58-4069-9b9d-1030b4466f54",
+            "96243f24-b081-4601-a00c-d55aa25a4ead",
+            "7c4add73-5d21-48e9-af14-6626201707e5"
+        ],
+        "name": "Planet Bluto",
+        "formatted_name": ">PLANET_BLUTO",
+        "desc": ">PLANET_BLUTO is a multi-media online creator that specializes in game development, web app development, 3D art, chiptune/electronic music production, and more",
+        "discordIds": [
+            "334039742205132800"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Music",
+            "Game Dev",
+            "Streamer"
+        ],
+        "twitchId": "159547318",
+        "links": {
+            "TWT": "https://x.com/PlanetBlutonium",
+            "SITE": "https://planet-bluto.net/",
+            "NG": "https://blutonium.newgrounds.com/",
+            "ITCH": "https://planet-bluto.itch.io/",
+            "TTV": "https://www.twitch.tv/planet_bluto",
+            "SC": "https://soundcloud.com/planet-bluto/",
+            "YT": "https://www.youtube.com/@PlanetBluto",
+            "KOFI": "https://ko-fi.com/planet_bluto",
+            "STEAM": "https://steamcommunity.com/id/planet_bluto/"
+        },
+        "style": {
+            "animated_icon": true,
+            "border_type": "Cloud",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#024aca",
+            "background_color": "#151515",
+            "no_icon_outline": true,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": [
+            {
+                "nid": "6e50f83c-1ddf-4f06-bff6-0693b5d50797",
+                "name": " Cirrus",
+                "artists": [
+                    "planet_bluto"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "cirrus_blu.wav",
+                "file_start": 0,
+                "file_end": -1,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i.imgur.com/HYfmEAa.png"
+            },
+            {
+                "nid": "452e0e73-978d-48e2-ae80-f5e95069406d",
+                "name": "Turning Point",
+                "artists": [
+                    "planet_bluto"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "turning_point_blu.wav",
+                "file_start": 0,
+                "file_end": -1,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i.imgur.com/WrR9a4R.png"
+            },
+            {
+                "nid": "67bff758-af58-4069-9b9d-1030b4466f54",
+                "name": "LOOP:BREAK",
+                "artists": [
+                    "planet_bluto"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "loop_break_blu.wav",
+                "file_start": 0,
+                "file_end": -1,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i.imgur.com/glxkOof.png"
+            },
+            {
+                "nid": "96243f24-b081-4601-a00c-d55aa25a4ead",
+                "name": "Summerlight",
+                "artists": [
+                    "planet_bluto"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "summerlight_blu.wav",
+                "file_start": 0,
+                "file_end": -1,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i.imgur.com/a8ZnjP7.png"
+            },
+            {
+                "nid": "7c4add73-5d21-48e9-af14-6626201707e5",
+                "name": "ProjectHTTP",
+                "artists": [
+                    "lognes",
+                    "planet_bluto"
+                ],
+                "fields": [
+                    "Game Dev",
+                    "Video"
+                ],
+                "filename": "project_http_showcase.ogv",
+                "file_start": 0,
+                "file_end": 10,
+                "platforms": [
+                    "SC"
+                ],
+                "media": null
+            }
+        ]
+    },
+    {
+        "icon": null,
+        "id": "pixelzwithaz",
+        "artIds": [],
+        "name": "PixelzwithaZ",
+        "formatted_name": ">PIXELZWITHAZ",
+        "desc": "PixelzwithaZ is a visual artist who makes 3D models and rig and does decent rig animation, as well as being a musical artist using Beepbox and a game dev using Godot",
+        "discordIds": [
+            "739933578498146354"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Music",
+            "Game Dev"
+        ],
+        "twitchId": "",
+        "links": {
+            "YT": "https://youtube.com/@pixelzwithaz",
+            "SC": "https://soundcloud.com/e_pixelz",
+            "TWT": "https://x.com/PixelzwithaZ"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "discoholic",
+        "artIds": [],
+        "name": "Discoholic",
+        "formatted_name": ">DISCOHOLIC",
+        "desc": "Discoholic is musical artist and DJ who does everything disco, funk, and house related- with a hint of VGM influences- whether it’s old school or new wave, as well as a twitch streamer with a high energy personality that does DJ sets and other fun events",
+        "discordIds": [
+            "120021240906907650"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Music",
+            "Streamer"
+        ],
+        "twitchId": "181392471",
+        "links": {
+            "SITE": "https://discoholic.neocities.org/",
+            "TTV": "https://www.twitch.tv/discoholic",
+            "SP": "https://www.sptfy.com/discoholic",
+            "SC": "https://www.soundcloud.com/discoholicmusic",
+            "TWT": "https://twitter.com/discoholicmusic",
+            "IG": "https://instagram.com/discoholicmusic"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "flyann",
+        "artIds": [],
+        "name": "Flyann",
+        "formatted_name": ">FLYANN",
+        "desc": "Flyann is a youtuber/twitch streamer and visual artist turned game dev who uses a game engine for their stream layout to make it more interactive, introducing an MMO called “Fly Online” that can be played in twitch chat",
+        "discordIds": [
+            "125909828970217472"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Music",
+            "Game Dev",
+            "Streamer"
+        ],
+        "twitchId": "",
+        "links": {
+            "TTV": "https://twitch.tv/flyann",
+            "TWT": "https://x.com/flyann_",
+            "YT": "https://www.youtube.com/@flyann2"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "supabubba",
+        "artIds": [],
+        "name": "SupaBubba",
+        "formatted_name": ">SUPABUBBA",
+        "desc": "SupaBubba is a musical artist who makes VGM with rich soundscapes, inspired insturmentation from SNES and retro FM, and composition that makes you wanna groove",
+        "discordIds": [
+            "290724255056920577"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Music"
+        ],
+        "twitchId": "",
+        "links": {
+            "BC": "https://supabubba.bandcamp.com/",
+            "MUSIC": "https://music.apple.com/us/artist/supabubba/1556770824",
+            "SC": "https://soundcloud.com/supabubba",
+            "SP": "https://open.spotify.com/artist/4kYupBlsYohqJfhNw9Ofj4?si=bkcJ9_LsQZy6_9SXGZsy8g",
+            "YT": "https://www.youtube.com/channel/UCvTqSkUu7ocfcYmnTEY9SNA",
+            "TWT": "https://twitter.com/SupaBubbaMusic",
+            "TT": "https://www.tiktok.com/@supabubbamusic",
+            "IG": "https://www.instagram.com/supabubbamusic"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "SnugglyBun",
+        "formatted_name": ">SNUGGLYBUN",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "Zantilla",
+        "formatted_name": ">ZANTILLA",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "Tesselode",
+        "formatted_name": ">TESSELODE",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "Jneen",
+        "formatted_name": ">JNEEN",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "Automaphonica",
+        "formatted_name": ">AUTOMAPHONICA",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "Gasparatus",
+        "formatted_name": ">GASPARATUS",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "TwoHats",
+        "formatted_name": ">TWOHATS",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "gamegarage",
+        "artIds": [],
+        "name": "Star Garden",
+        "formatted_name": ">STAR_GARDEN",
+        "desc": "Star Garden is a game being developed by GameGarage with an early 2000s vibe that features has the mechanics of raising a creature like Chao Garden in Sonic Adventure, and then the gameplay of City Trial in Kirby Air Ride, with music done by Qteku",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [
+            "Game Dev"
+        ],
+        "twitchId": "",
+        "links": {
+            "TWT": "https://x.com/GameGarageLLC",
+            "YT": "https://www.youtube.com/@GameGarageLLC"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "ivy / bee",
+        "formatted_name": ">IVY_/_BEE",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "Nobonoko",
+        "formatted_name": ">NOBONOKO",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "flaks",
+        "artIds": [],
+        "name": "FLAKS",
+        "formatted_name": ">FLAKS",
+        "desc": "FLAKS is a musical artist who makes deep electronic tunes  with rich soundscapes and an emphasis on hard hitting beats and bass heavy instrumentation",
+        "discordIds": [
+            "264731258419019777"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Music"
+        ],
+        "twitchId": "",
+        "links": {
+            "SC": "https://on.soundcloud.com/GERHx",
+            "BC": "https://flaks.bandcamp.com/",
+            "TWT": "https://x.com/FLAKS__",
+            "YT": "https://youtube.com/@flaksss"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "cubenatural",
+        "artIds": [],
+        "name": "CubeNatural",
+        "formatted_name": ">CUBENATURAL",
+        "desc": "CubeNatural is a musical artist with an early 2000s vibe who makes tunes that explore genres such as jungle, house, and breakcore as well as being a visual artist who does expressive character designs, comics, and also 3D modelling",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Music"
+        ],
+        "twitchId": "",
+        "links": {
+            "SP": "https://open.spotify.com/artist/7eCVr77vjtJyaZLTjyTx22",
+            "SC": "https://soundcloud.com/cube-natural",
+            "BC": "https://cubenatural.bandcamp.com/",
+            "IG": "https://www.instagram.com/cube_natural/",
+            "TWT": "https://twitter.com/cube_natural",
+            "YT": "https://www.youtube.com/channel/UCH8BXE78JaDw7Tt0jyxByow",
+            "TT": "https://www.tiktok.com/@cubenatural?lang=en",
+            "DC": "https://discord.gg/aTtpsASyRn"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "metaroom",
+        "artIds": [],
+        "name": "METAROOM",
+        "formatted_name": ">METAROOM",
+        "desc": "METAROOM is a musical artist who makes tunes with interesting soundscapes and an incredible understanding of instrumentation, sampling, and rhythm that explores various genres, vibes, and moods",
+        "discordIds": [
+            "193922272459882496"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Music"
+        ],
+        "twitchId": "",
+        "links": {
+            "SC": "https://soundcloud.com/themetaroom",
+            "SP": "https://open.spotify.com/artist/72igsHCazmE9rlVm0c4I9d",
+            "TWT": "https://x.com/themetaroom",
+            "BC": "https://themetaroom.bandcamp.com/"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "memodemo",
+        "artIds": [],
+        "name": "MEMODEMO",
+        "formatted_name": ">MEMODEMO",
+        "desc": "MEMODEMO is an electronic musical artist who specializes in upbeat, energetic, and nostalgic tunes spanning various genres such as future bass, drum’n’bass, and digital fusion",
+        "discordIds": [
+            "279454218576986112"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Music"
+        ],
+        "twitchId": "",
+        "links": {
+            "SITE": "https://www.memodemo.zip/",
+            "BC": "https://memodemo.bandcamp.com/",
+            "SP": "https://open.spotify.com/artist/3ko5DgW7C8cS3VDvpozPag",
+            "SC": "https://soundcloud.com/memodemo",
+            "YT": "https://www.youtube.com/MEMODEMO",
+            "TWT": "https://x.com/MEMODEMO"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/6f6894c3-4940-4cea-9b3a-249dc90734a0/aquasine_open.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=1edb70dd709dc5b54f84ed5df1051c4dbd0db7500233a34d4146ac2c6fa8deb6&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "aquasine",
+        "artIds": [
+            "8d7c800e-b2aa-44bf-ba05-08784a98f0d1",
+            "a07635ca-59ed-4788-b359-aa49bc90e6c0",
+            "df883750-47df-4ba1-b157-f1722f3f0984",
+            "ffb06d1e-bf9b-4c3a-b84b-05bf9f8263ee"
+        ],
+        "name": "AQUASINE",
+        "formatted_name": ">AQUASINE",
+        "desc": "AQUASINE is a musical artist who makes internetcore tunes with heavy chiptune/VGM inspirations and jazzy compositions with deep understandings of rhythm. He also does pixel art and 3D models for cover art, as well as being a developer himself!",
+        "discordIds": [
+            "246730303886983169"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Music",
+            "Game Dev",
+            "Streamer"
+        ],
+        "twitchId": "71081241",
+        "links": {
+            "TWT": "https://x.com/_AQUASINE",
+            "BC": "https://aquasine.bandcamp.com/",
+            "SP": "https://open.spotify.com/artist/77ncj3o51Ng6KaJCp5wTiG",
+            "YT": "https://www.youtube.com/@_AQUASINE",
+            "SITE": "https://aquasine.net/",
+            "TTV": "https://www.twitch.tv/aquasine"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Jaggy",
+            "top_border_color": "#00ffd5",
+            "bottom_border_color": "#6817ff",
+            "name_color": "#00ffd5",
+            "background_color": "#141414",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#edff0f"
+        },
+        "art": [
+            {
+                "nid": "8d7c800e-b2aa-44bf-ba05-08784a98f0d1",
+                "name": "Floating Point",
+                "artists": [
+                    "aquasine"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "AQUASINE - Floating Point.mp3",
+                "file_start": 0,
+                "file_end": 20,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i1.sndcdn.com/artworks-ukywTgAEhM59SQq1-zWgpQw-t500x500.jpg"
+            },
+            {
+                "nid": "a07635ca-59ed-4788-b359-aa49bc90e6c0",
+                "name": "Alphanumeric",
+                "artists": [
+                    "aquasine"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "AQUASINE - Alphanumeric.mp3",
+                "file_start": 154,
+                "file_end": 175,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i1.sndcdn.com/artworks-cGZzVdUyBzlpUBvp-nKUoCQ-t500x500.jpg"
+            },
+            {
+                "nid": "df883750-47df-4ba1-b157-f1722f3f0984",
+                "name": "Speech Jammer",
+                "artists": [
+                    "aquasine"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "AQUASINE - Speech Jammer.mp3",
+                "file_start": 10,
+                "file_end": 20,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i1.sndcdn.com/artworks-5IzwEZTpykR0n3lI-eVZBuA-t500x500.jpg"
+            },
+            {
+                "nid": "ffb06d1e-bf9b-4c3a-b84b-05bf9f8263ee",
+                "name": "NOW ENTERING",
+                "artists": [
+                    "aquasine"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "AQUASINE - NOW ENTERING.mp3",
+                "file_start": 0,
+                "file_end": 10,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i1.sndcdn.com/artworks-Thz6SbkzqXZdAxSl-8lrAJw-t500x500.jpg"
+            }
+        ]
+    },
+    {
+        "icon": null,
+        "id": "jc",
+        "artIds": [],
+        "name": "JC",
+        "formatted_name": ">JC",
+        "desc": "JC is a musical artist who makes sample based tunes that reminds you of early 2000 DJ sets and has done work for games such as Pizza Tower- as well as currently working on their own game KIPIDON, a stylized 3D cute shooter about making people feel love again!",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [
+            "Music",
+            "Game Dev"
+        ],
+        "twitchId": "",
+        "links": {
+            "SITE": "https://jcportals.neocities.org/",
+            "BC": "https://rizi.bandcamp.com/",
+            "STEAM": "https://store.steampowered.com/app/2578160/KIPIDON/"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "jumpbreak",
+        "formatted_name": ">JUMPBREAK",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "DillionMuse",
+        "formatted_name": ">DILLIONMUSE",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "aia",
+        "artIds": [],
+        "name": "AIA",
+        "formatted_name": ">AIA",
+        "desc": "AIA is a game dev and twitch streamer who has an interactive stream layout and is currently working on a game called Mana Valley, a casual open world RPG that features a magic system and farming simulation",
+        "discordIds": [
+            "190561857050902529"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Game Dev",
+            "Streamer"
+        ],
+        "twitchId": "131840097",
+        "links": {
+            "YT": "https://www.youtube.com/c/AIAdev",
+            "DC": "https://discord.gg/EqxuvWg",
+            "ITCH": "https://aiadev.itch.io/",
+            "TWT": "https://twitter.com/the_real_aia",
+            "STEAM": "https://store.steampowered.com/app/1983360/Mana_Valley/",
+            "TTV": "https://www.twitch.tv/the_aia"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "Wooqi",
+        "formatted_name": ">WOOQI",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "hayd_n",
+        "artIds": [],
+        "name": "Hayd_n",
+        "formatted_name": ">HAYD_N",
+        "desc": "Hayd_n is a visual artist and game dev who makes stylized 3D models and rigs and is currently working on a rhythm based beat’em’up that",
+        "discordIds": [
+            "328396828934406154"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Game Dev"
+        ],
+        "twitchId": "",
+        "links": {
+            "TWT": "https://x.com/Hayd__n",
+            "GAME": "https://x.com/jamphibian_game"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "rasterplan",
+        "artIds": [],
+        "name": "RasterPlan",
+        "formatted_name": ">RASTERPLAN",
+        "desc": "RasterPlan is a visual artist who does impressive spritework, detailed character designs, and really well stylized 3D models and rigs",
+        "discordIds": [
+            "253423339454988290"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals"
+        ],
+        "twitchId": "",
+        "links": {
+            "TWT": "https://x.com/RasterPlan"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "tohomoko",
+        "artIds": [],
+        "name": "Tohomoko",
+        "formatted_name": ">TOHOMOKO",
+        "desc": "Tohomoko is a musical and visual artist that makes chiptune and VGM music in Beepbox with rich compositions and also does traditional drawing and neat character art as well as dabbling in game development as well",
+        "discordIds": [
+            "325365336197169153"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Music",
+            "Game Dev"
+        ],
+        "twitchId": "",
+        "links": {
+            "SC": "https://soundcloud.com/tohomoko",
+            "TWT": "https://x.com/tohomoko",
+            "YT": "https://www.youtube.com/@tohomoko5120/videos",
+            "SP": "https://open.spotify.com/artist/6PDj07nHglppu9ZY2UE4Ql"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "practicalnpc",
+        "artIds": [],
+        "name": "PracticalNPC",
+        "formatted_name": ">PRACTICALNPC",
+        "desc": "PracticalNPC is a game dev and Twitch streamer who’s currently working on a game called Memori, a tight and fast precision platformer",
+        "discordIds": [
+            "260788380495773697"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Game Dev",
+            "Streamer"
+        ],
+        "twitchId": "479509391",
+        "links": {
+            "STEAM": "https://store.steampowered.com/app/1712700/Memori/",
+            "TTV": "https://www.twitch.tv/practicalnpc",
+            "TWT": "https://x.com/PracticalNPC"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "",
+        "artIds": [],
+        "name": "Tyjiro",
+        "formatted_name": ">TYJIRO",
+        "desc": "",
+        "discordIds": [],
+        "musicIds": [],
+        "fields": [],
+        "twitchId": "",
+        "links": {},
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/e20a883c-4cc4-49c0-b1f5-c0d11d92b32b/mdxcai2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=2417bdb402ac97bbc3ef9218a51af0fd79a492db45f9420777cac5af664916f1&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "mdxcai",
+        "artIds": [],
+        "name": "Mordecai",
+        "formatted_name": ">MORDECAI",
+        "desc": "MDXCAI is a game dev, visual artist, and twitch streamer who uses the Unity game engine for their stream layout for more interactive streams, and portrays the world of Kyomi- the dark purple and rainy realm caught between life and death- through his works",
+        "discordIds": [
+            "207104451079569409"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Music",
+            "Game Dev",
+            "Streamer"
+        ],
+        "twitchId": "702095678",
+        "links": {
+            "SITE": "https://mdxcai.com/",
+            "TTV": "https://www.twitch.tv/mdxcai",
+            "GAME": "https://tera14.com/"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Waves",
+            "top_border_color": "#8376da",
+            "bottom_border_color": "#8376da",
+            "name_color": "#8376da",
+            "background_color": "#0b0c10",
+            "no_icon_outline": true,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#caccff"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/4465bd4c-e910-41e8-a405-e54f813bd864/qteku_transparent.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=1b9accfcd9173a824c6807c31351072e5c39a666f8d3f7fe86b718a9ccf87373&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "qteku",
+        "artIds": [
+            "9c94dbc0-b2d7-4d07-94d1-0d60c8de201e",
+            "a119507c-d8ca-450e-82c2-390dbee76373",
+            "bdbd4519-7b9a-4ba2-9f3a-b497e8104860",
+            "b64df020-6ce9-4f73-895d-9c4a1143a7d8"
+        ],
+        "name": "Qteku",
+        "formatted_name": ">QTEKU",
+        "desc": "Qteku is a musical artist who makes nostalgic tracks with  an early Y2K aesthetic, featuring genres like jungle, drum ‘n’ bass, house, and techno",
+        "discordIds": [
+            "288735715955703809"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Music",
+            "Streamer"
+        ],
+        "twitchId": "",
+        "links": {
+            "SC": "https://soundcloud.com/qteku",
+            "BC": "https://qteku.bandcamp.com/",
+            "SP": "https://open.spotify.com/artist/6qgpJ5KNKm4zNVFBiPaRv1",
+            "TWT": "https://twitter.com/bubbmungus"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Saw",
+            "top_border_color": "#ceb7ff",
+            "bottom_border_color": "#feb099",
+            "name_color": "#ffffff",
+            "background_color": "#fff177",
+            "no_icon_outline": true,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#fbe159"
+        },
+        "art": [
+            {
+                "nid": "9c94dbc0-b2d7-4d07-94d1-0d60c8de201e",
+                "name": "Bimo",
+                "artists": [
+                    "qteku"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "Qteku - Bimo.mp3",
+                "file_start": 30,
+                "file_end": 45,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i1.sndcdn.com/artworks-zG9cEqFiAfnka1zv-zZevMA-t500x500.jpg"
+            },
+            {
+                "nid": "a119507c-d8ca-450e-82c2-390dbee76373",
+                "name": "Rat Trap",
+                "artists": [
+                    "qteku"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "Qteku - Rat Trap.mp3",
+                "file_start": 10,
+                "file_end": 25,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i1.sndcdn.com/artworks-eaV51EoUSd80eTyV-O22NHw-t500x500.jpg"
+            },
+            {
+                "nid": "bdbd4519-7b9a-4ba2-9f3a-b497e8104860",
+                "name": "Submarine",
+                "artists": [
+                    "qteku"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "Qteku - Submarine.mp3",
+                "file_start": 0,
+                "file_end": 10,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i1.sndcdn.com/artworks-h3inXbl21FpBHVxu-Qnnv8Q-t500x500.jpg"
+            },
+            {
+                "nid": "b64df020-6ce9-4f73-895d-9c4a1143a7d8",
+                "name": "I’m Gonna Pass You",
+                "artists": [
+                    "qteku"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "Qteku - I’m Gonna Pass You.mp3",
+                "file_start": 0,
+                "file_end": 10,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i1.sndcdn.com/artworks-VIySZnbsuhkzROUu-PGf3yw-t500x500.jpg"
+            }
+        ]
+    },
+    {
+        "icon": "https://cdn.discordapp.com/emojis/1144579290969682010.png",
+        "id": "nme64",
+        "artIds": [],
+        "name": "NME64",
+        "formatted_name": ">NME64",
+        "desc": "NME64 is a twitch streamer and game dev who uses Godot for game dev as well as stuff like their interactive stream layout and website",
+        "discordIds": [
+            "985653980719902790"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Game Dev",
+            "Streamer"
+        ],
+        "twitchId": "754760081",
+        "links": {
+            "TTV": "https://www.twitch.tv/nme64_u",
+            "TWT": "https://x.com/nme64_u"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Jaggy",
+            "top_border_color": "#000000",
+            "bottom_border_color": "#000000",
+            "name_color": "#02ccf9",
+            "background_color": "#ffff00",
+            "no_icon_outline": false,
+            "icon_outline_color": "#000000",
+            "element_outline_color": "#02ccf9"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/8538aec3-0661-40cc-9608-942fe0cf209a/maidmage_open.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=90b9b9aa05ed9b2367a620d47ee1b22411d03235cd78a2685b7ac9a1815b7584&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "maidmage",
+        "artIds": [
+            "e075de4c-e47b-461c-84d3-3c9680c45445",
+            "9a52143a-4f4e-4694-8304-14d94b37b381",
+            "3b962f6c-9f79-44cb-a280-66bc2dbe4213",
+            "ac156ce3-e9f4-4256-9b0f-3bc20a34aadd",
+            "48e2f0a7-4053-4c87-8a15-b220d5555cd7"
+        ],
+        "name": "Maidmage",
+        "formatted_name": ">MAIDMAGE",
+        "desc": "Maidmage is a visual artist who does really stylized character models and rigs, recently having more of a Y2K aesthetic",
+        "discordIds": [
+            "194955469897334784"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Game Dev",
+            "Streamer"
+        ],
+        "twitchId": "163206578",
+        "links": {
+            "TTV": "https://www.twitch.tv/maidmagedev",
+            "TWT": "https://twitter.com/maidmage"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Waves",
+            "top_border_color": "#0000ff",
+            "bottom_border_color": "#0000ff",
+            "name_color": "#0000ff",
+            "background_color": "#ffffff",
+            "no_icon_outline": false,
+            "icon_outline_color": "#ffffff",
+            "element_outline_color": "#0000ff"
+        },
+        "art": [
+            {
+                "nid": "e075de4c-e47b-461c-84d3-3c9680c45445",
+                "name": "MAIDMAGE BRC",
+                "artists": [
+                    "maidmage"
+                ],
+                "fields": [
+                    "Video",
+                    "Visual"
+                ],
+                "filename": "maidfunk_rendered_maidmage.ogv",
+                "file_start": 0,
+                "file_end": 10,
+                "platforms": [
+                    "SC"
+                ],
+                "media": null
+            },
+            {
+                "nid": "9a52143a-4f4e-4694-8304-14d94b37b381",
+                "name": "MDXCAI BRC",
+                "artists": [
+                    "maidmage"
+                ],
+                "fields": [
+                    "Video",
+                    "Visual"
+                ],
+                "filename": "mord_square_maidmage.ogv",
+                "file_start": 0,
+                "file_end": 10,
+                "platforms": [
+                    "SC"
+                ],
+                "media": null
+            },
+            {
+                "nid": "3b962f6c-9f79-44cb-a280-66bc2dbe4213",
+                "name": "NME64 BRC",
+                "artists": [
+                    "maidmage"
+                ],
+                "fields": [
+                    "Video",
+                    "Visual"
+                ],
+                "filename": "byte30001-0850_maidmage.ogv",
+                "file_start": 0,
+                "file_end": 10,
+                "platforms": [
+                    "SC"
+                ],
+                "media": null
+            },
+            {
+                "nid": "ac156ce3-e9f4-4256-9b0f-3bc20a34aadd",
+                "name": "GRYNMOOR",
+                "artists": [
+                    "maidmage"
+                ],
+                "fields": [
+                    "Video",
+                    "Visual"
+                ],
+                "filename": "0001-0500_maidmage.ogv",
+                "file_start": 0,
+                "file_end": 10,
+                "platforms": [
+                    "SC"
+                ],
+                "media": null
+            },
+            {
+                "nid": "48e2f0a7-4053-4c87-8a15-b220d5555cd7",
+                "name": "HECHI",
+                "artists": [
+                    "maidmage"
+                ],
+                "fields": [
+                    "Video",
+                    "Visual"
+                ],
+                "filename": "hechi_getreal_maidmage.ogv",
+                "file_start": 0,
+                "file_end": 10,
+                "platforms": [
+                    "SC"
+                ],
+                "media": null
+            }
+        ]
+    },
+    {
+        "icon": null,
+        "id": "grynmoor",
+        "artIds": [],
+        "name": "Grynmoor",
+        "formatted_name": ">GRYNMOOR",
+        "desc": "Grynmoor is a visual artist who does intricate robot character designs and stylized 3D models and rigs- as well as a pixel artist who is working on ways to merge both mediums",
+        "discordIds": [
+            "1052818743006330901"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Game Dev",
+            "Streamer"
+        ],
+        "twitchId": "535380036",
+        "links": {
+            "TWT": "https://twitter.com/grynmoor",
+            "TTV": "https://twitch.tv/grynmoor/",
+            "KOFI": "https://ko-fi.com/grynmoor",
+            "VGEN": "https://vgen.co/grynmoor"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/57a6e300-0a3c-4e2c-9076-aa66b1d3fd57/chubbs_closed.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=9872af0e4752be6043821d8b82b1cf1f28cc9da436953cd0364a4a97ba109ac3&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "chubbs",
+        "artIds": [],
+        "name": "Chubbs",
+        "formatted_name": ">CHUBBS",
+        "desc": "Chubbs is a visual artist who does really good work for character designs",
+        "discordIds": [
+            "292487528177598464"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals"
+        ],
+        "twitchId": "",
+        "links": {
+            "IG": "https://www.instagram.com/chubbo_o"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/c33ec170-22a7-4746-8378-13caeb1f21ec/orko_closed.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=e163cc3625310c9821513f11197d7ac53bc9e4077c90787bb4c7197930b0b544&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "meat",
+        "artIds": [],
+        "name": "MEAT",
+        "formatted_name": ">MEAT",
+        "desc": "MEAT is a visual artist and game dev who does really good work for character designs as well as very passionate about lots of media",
+        "discordIds": [
+            "279777552858349579"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Game Dev",
+            "Streamer"
+        ],
+        "twitchId": "193868107",
+        "links": {
+            "TWT": "https://x.com/M_EEAT",
+            "TTV": "https://www.twitch.tv/m_eeat",
+            "YT": "https://www.youtube.com/@biometricmeat"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Spikes",
+            "top_border_color": "#FF2222",
+            "bottom_border_color": "#FF2222",
+            "name_color": "#FF2222",
+            "background_color": "#000000",
+            "no_icon_outline": false,
+            "icon_outline_color": "#000000",
+            "element_outline_color": "#FF2222"
+        },
+        "art": []
+    },
+    {
+        "icon": null,
+        "id": "idogedochiptune",
+        "artIds": [],
+        "name": "iDogedochiptune",
+        "formatted_name": ">IDOGEDOCHIPTUNE",
+        "desc": "iDoge is a chiptune/digifu musical artist who uses Blubox (a mod of Beepbox made by Blu) to make really chill & nostalgic jams with beautiful soundscapes and impressive compositions",
+        "discordIds": [
+            "292415267508584448"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Music"
+        ],
+        "twitchId": "",
+        "links": {
+            "SC": "https://soundcloud.com/idoge-451382705",
+            "TWT": "https://x.com/idogedochiptune",
+            "BC": "https://idogedochiptune.bandcamp.com/",
+            "KOFI": "https://ko-fi.com/idogedochiptune",
+            "YT": "https://www.youtube.com/@idogedochiptune"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Straight",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/7f600d70-93be-4378-9a1b-71da004cb460/subi_closed.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=91dea36b45e2318bc64444081703bedf64c46a44b6d42a36849b5788ee9607cd&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "subicat",
+        "artIds": [],
+        "name": "SubiCat",
+        "formatted_name": ">SUBICAT",
+        "desc": "SubiCat is a (sometimes chiptune) musical artist and pianist who uses Beepbox to make pleasant tunes with really nice compositions",
+        "discordIds": [
+            "412836292163010572"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Music"
+        ],
+        "twitchId": "",
+        "links": {
+            "TWT": "https://x.com/SubiiCat",
+            "SC": "https://soundcloud.com/subicat",
+            "YT": "https://www.youtube.com/@SubiCat"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Waves",
+            "top_border_color": "#25E2CD",
+            "bottom_border_color": "#25E2CD",
+            "name_color": "#25E2CD",
+            "background_color": "#ffe737",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/464179dc-3a7c-4a23-a2eb-2cfc5e437a2c/debi_closed.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=d849f002101a0129d5170489adfda7338b102565d5516c8267312eac1a528779&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "devious",
+        "artIds": [],
+        "name": "Devious",
+        "formatted_name": ">DEVIOUS",
+        "desc": "Devious is a musical artist known in the Beepbox scene for his jazzy compositions with a range of styles and instrumentations, even dabbling in other programs",
+        "discordIds": [
+            "148471246680621057"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Music"
+        ],
+        "twitchId": "",
+        "links": {
+            "SC": "https://soundcloud.com/devious-on-jummbox",
+            "NG": "https://deviousjb.newgrounds.com/",
+            "ART": "https://cdn.discordapp.com/attachments/1189424602787627080/1248449787855110154/IMG_8286.jpg?ex=66650678&is=6663b4f8&hm=93f0594dd7922a194cfe58706ef2377b5ef8a49d7ab48cadb57bb4dbfc8836d2&"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Waves",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#5C3C0D",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/bc3fce62-2cef-4128-a1cd-679bbaea18a2/ans_closed.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=12a6d0d6afd285b3244a686509e185082827312fea2eb1eed3d5ea5236b8d435&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "answearingmachine",
+        "artIds": [],
+        "name": "Answearing Machine",
+        "formatted_name": ">ANSWEARING_MACHINE",
+        "desc": "Answearing Machine is a musical artist who makes ‘music for tryhards’ in Beepbox that is electronic adjacent and feature intricate drum compositions due to their drummer background",
+        "discordIds": [
+            "150398769651777538"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Music"
+        ],
+        "twitchId": "",
+        "links": {
+            "SC": "https://soundcloud.com/answearingmachine",
+            "BC": "https://a-ns.bandcamp.com/",
+            "YT": "https://www.youtube.com/channel/UCsPeLVsrpEfK3mzbumYfZwg",
+            "KOFI": "https://ko-fi.com/answearingmachine"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Saw",
+            "top_border_color": "#848484",
+            "bottom_border_color": "#848484",
+            "name_color": "#024aca",
+            "background_color": "#a8a8a8",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/94cf95a2-74ea-4938-8962-c4a75032206c/salty_closed.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=0a86900abec69da01fac1b97799317b0eec413e2fb78db4856270c7bb184c4a4&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "alwaysalty",
+        "artIds": [],
+        "name": "Alwaysalty",
+        "formatted_name": ">ALWAYSALTY",
+        "desc": "Alwaysalty is a visual artist who makes intricate drawings of various creatures, as well as a musical artist occasionally who makes cool electronic music using Beepbox",
+        "discordIds": [
+            "497844474043432961"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Music"
+        ],
+        "twitchId": "",
+        "links": {
+            "TWT": "https://x.com/Alwaysalty",
+            "SC": "https://soundcloud.com/saltpersonthing"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Waves",
+            "top_border_color": "#00ffbf",
+            "bottom_border_color": "#00ffbf",
+            "name_color": "#00ffbf",
+            "background_color": "#6100b7",
+            "no_icon_outline": false,
+            "icon_outline_color": "#320060",
+            "element_outline_color": "#320060"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/0087ff8e-af57-4db3-86fb-6d17b7ffff5c/karma_closed.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=c7dbc533425d43668d3da361a647b1e87078e8431a6de48898611867acb806ed&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "karma",
+        "artIds": [],
+        "name": "Karma",
+        "formatted_name": ">KARMA",
+        "desc": "Karma is a software engineer/programmer who’s also a classically trained pianist who uses beepbox and other softwares",
+        "discordIds": [
+            "383851442341019658"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Music"
+        ],
+        "twitchId": "",
+        "links": {
+            "SC": "https://soundcloud.com/numatarada",
+            "TWT": "https://x.com/_nukarma",
+            "DEV": "https://github.com/blaqat"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Spikes",
+            "top_border_color": "#252525",
+            "bottom_border_color": "#252525",
+            "name_color": "#CC69E4",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": []
+    },
+    {
+        "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2002dc7a-2cd5-4b3f-8709-2c7d25e2849d/e05a3de1-57f7-42b3-8df4-b0a52751c48a/log_closed.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X%2F20241128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241128T012533Z&X-Amz-Expires=3600&X-Amz-Signature=8522dff042797a8aafd75b47d656d1ff52677ef9a2778b81bc8e781118551023&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "id": "lognes",
+        "artIds": [
+            "093f73ed-e1ff-4819-9477-202d59999a18",
+            "70b20149-0ddb-46af-9d32-11550c2b2753",
+            "33116694-6ba4-41da-a863-40ab068e8533",
+            "7c4add73-5d21-48e9-af14-6626201707e5"
+        ],
+        "name": "Lognes",
+        "formatted_name": ">LOGNES",
+        "desc": "Lognes is an artist who creates hard chiptune rock music in beepbox and various types of other visual arts. He is also one of the developers of ProjectHTTP who does visuals, sounds, and game feel!",
+        "discordIds": [
+            "141323186259230721"
+        ],
+        "musicIds": [],
+        "fields": [
+            "Visuals",
+            "Music"
+        ],
+        "twitchId": "437835675",
+        "links": {
+            "SITE": "https://lognes.neocities.org/",
+            "TWT": "https://x.com/Lognes_",
+            "SC": "https://soundcloud.com/lognes"
+        },
+        "style": {
+            "animated_icon": false,
+            "border_type": "Spikes",
+            "top_border_color": "#ea1d23",
+            "bottom_border_color": "#0a89ff",
+            "name_color": "#ffffff",
+            "background_color": "#151515",
+            "no_icon_outline": false,
+            "icon_outline_color": "#151515",
+            "element_outline_color": "#050505"
+        },
+        "art": [
+            {
+                "nid": "093f73ed-e1ff-4819-9477-202d59999a18",
+                "name": "Red & Blue",
+                "artists": [
+                    "lognes"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "red_and_blue_lognes.wav",
+                "file_start": 0,
+                "file_end": -1,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i1.sndcdn.com/artworks-Zbi8mR0G54hNmBcP-qAvdPQ-t500x500.jpg"
+            },
+            {
+                "nid": "70b20149-0ddb-46af-9d32-11550c2b2753",
+                "name": "FOUR. FOUR. FOUR. FOUR. ",
+                "artists": [
+                    "lognes"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "four_four_four_four_lognes.wav",
+                "file_start": 0,
+                "file_end": -1,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i.imgur.com/EEiLZL8.png"
+            },
+            {
+                "nid": "33116694-6ba4-41da-a863-40ab068e8533",
+                "name": "Black 2",
+                "artists": [
+                    "lognes"
+                ],
+                "fields": [
+                    "Music"
+                ],
+                "filename": "black_2_lognes.wav",
+                "file_start": 0,
+                "file_end": -1,
+                "platforms": [
+                    "SC"
+                ],
+                "media": "https://i.imgur.com/IS7DGj9.png"
+            },
+            {
+                "nid": "7c4add73-5d21-48e9-af14-6626201707e5",
+                "name": "ProjectHTTP",
+                "artists": [
+                    "lognes",
+                    "planet_bluto"
+                ],
+                "fields": [
+                    "Game Dev",
+                    "Video"
+                ],
+                "filename": "project_http_showcase.ogv",
+                "file_start": 0,
+                "file_end": 10,
+                "platforms": [
+                    "SC"
+                ],
+                "media": null
+            }
+        ]
+    }
+]

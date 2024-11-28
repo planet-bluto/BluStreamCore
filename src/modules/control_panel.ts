@@ -1,10 +1,13 @@
 import path from "path"
+import fs from "fs/promises"
 import express from 'express';
 import { app, setupRoom } from "./web_server"
 import { Socket } from "socket.io";
 import { Godot } from "./godot";
 import { apiClient } from "./twitch";
 import { ConsoleCommands } from "./console_commands";
+import { Artists, shoutout } from "./artists";
+import { OBS } from "./obs";
 
 const WEBSITE_PATH = path.resolve(__dirname, "../../website")
 
@@ -18,33 +21,33 @@ setupRoom("control_panel", (socket: Socket, callback: Function) => {
   // print(socket)
   socket.on("print", print)
 
-  // socket.on("request_friends", () => { socket.emit("friends_received", serialized_friend_data) })
+  socket.on("request_artists", () => { socket.emit("artists_received", Artists.getAll()) })
 
   socket.on("request_popups", async () => {
     var popups = await Godot.getPopups()
     socket.emit("popups_received", popups)
   })
 
-  // socket.on("request_emotes", async () => {
-  //   let files = await fs.readdir("./website/assets/emotes")
-  //   files = files.filter(file => !file.startsWith("."))
+  socket.on("request_emotes", async () => {
+    let files = await fs.readdir("./website/assets/emotes")
+    files = files.filter(file => !file.startsWith("."))
 
-  //   files = files.map(emotePath => {
-  //     let pathBits = emotePath.split(".")
-  //     pathBits = pathBits.splice(0, pathBits.length-1)
-  //     return pathBits.join(".")
-  //   })
+    files = files.map(emotePath => {
+      let pathBits = emotePath.split(".")
+      pathBits = pathBits.splice(0, pathBits.length-1)
+      return pathBits.join(".")
+    })
 
-  //   socket.emit("emotes_received", files)
-  // })
+    socket.emit("emotes_received", files)
+  })
 
-  // socket.on("shoutout", (friend_id) => { shoutout(friend_id) })
+  socket.on("shoutout", (friend_id) => { shoutout(friend_id) })
 
   socket.on("spawn_popup", (popup_id) => { Godot.spawnPopup(popup_id) })
 
   // socket.on("chatter_timeout", (twitch_id, duration) => { timeout(twitch_id, duration) })
 
-  // socket.on("stream_start", () => { start_stream() })
+  socket.on("stream_start", () => { OBS.start() })
 
   // socket.on("start_end_screen", () => { start_end_screen() })
   
@@ -88,22 +91,9 @@ setupRoom("control_panel", (socket: Socket, callback: Function) => {
     ConsoleCommands["set_game"].func(...(id.split(" ")))
   })
 
-  // socket.on("obs_zoom", async (obsZoomBounds) => {
-  //   await obs.call("SetSceneItemTransform", {sceneName: "Main - Focus WHATEVER", sceneItemId: 2, sceneItemTransform: {
-  //     positionX: obsZoomBounds.x,
-  //     positionY: obsZoomBounds.y,
-  //     boundsWidth: obsZoomBounds.w,
-  //     boundsHeight: obsZoomBounds.h,
-  //   }})
+  socket.on("obs_zoom", OBS.zoom)
 
-  //   await obs.call("SetCurrentPreviewScene", {sceneName: "Main - Focus WHATEVER"})
-  //   await obs.call("TriggerStudioModeTransition")
-  // })
-
-  // socket.on("obs_zoom_preset", async (preset) => {
-  //   await obs.call("SetCurrentPreviewScene", {sceneName: `Main - Focus ${preset}`})
-  //   await obs.call("TriggerStudioModeTransition")
-  // })
+  socket.on("obs_zoom_preset", OBS.zoom_preset)
 
   callback()
 })

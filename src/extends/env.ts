@@ -7,6 +7,10 @@ export interface IProcessEnv {
 
   WEB_PORT: string;
   OVERLAY_PORT: string;
+  OMNI_PORT: string;
+
+  NOTION_SECRET: string;
+  NEKOWEB_KEY: string;
 }
 
 declare global {

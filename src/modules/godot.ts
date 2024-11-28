@@ -1,6 +1,6 @@
 import { WebSocketServer } from 'ws'
 import { OmniMusicClass } from './omni'
-import { StreamHelper } from './obs'
+import { OBS } from './obs'
 
 const wss = new WebSocketServer({port: Number(process.env.OVERLAY_PORT)})
 
@@ -189,10 +189,10 @@ wss.on('connection', function connection(ws) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Godot.on("shoutout_start", (friend: any) => {
-  StreamHelper.shoutoutVisible = true
+Godot.on("shoutout_start", (artist: any) => {
+  OBS.shoutoutVisible = true
 })
 
-Godot.on("shoutout_end", (friend: any) => {
-  StreamHelper.shoutoutVisible = false
+Godot.on("shoutout_end", (artist: any) => {
+  OBS.shoutoutVisible = false
 })

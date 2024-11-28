@@ -2,7 +2,7 @@ import { exec } from 'child_process';
 import { OBSWebSocket } from 'obs-websocket-js';
 const obs = new OBSWebSocket()
 
-class StreamHelperClass {
+class OBSClass {
   _shoutoutVisible: boolean = false;
 
   constructor() {}
@@ -10,13 +10,14 @@ class StreamHelperClass {
   get shoutoutVisible() { return this._shoutoutVisible }
   set shoutoutVisible(value: boolean) {
     this._shoutoutVisible = value
-    obs.call("SetSceneItemEnabled", {sceneName: "Main (Root)", sceneItemId: 36, sceneItemEnabled: this._shoutoutVisible})
+    obs.call("SetSceneItemEnabled", {sceneName: "Main (Root)", sceneItemId: 36, sceneItemEnabled: value})
+    print("Setting shoutout visibility: ", value)
   }
 
   async start() {
     print("> Pretend I started stream just now...")
 
-    exec(`"P:\\Documents\\streamies\\!bats\\starting_soon.bat`)
+    exec(`P:\\Projects\\PlanetBlutoStreamNetwork\\.bats\\starting_soon.bat`)
   
     // Turn off all active outputs
     var outputRes = await obs.call("GetOutputList")
@@ -118,7 +119,7 @@ class StreamHelperClass {
   }
 }
 
-export const StreamHelper = new StreamHelperClass()
+export const OBS = new OBSClass()
 
 function tryConnectOBS() {
   obs.connect().then(() => {

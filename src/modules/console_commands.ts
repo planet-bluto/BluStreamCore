@@ -1,3 +1,4 @@
+import { Artists } from "./artists"
 import { Godot } from "./godot"
 import { apiClient } from "./twitch"
 import { SocketIO } from "./web_server"
@@ -193,9 +194,9 @@ ConsoleCommand("user_to_id", ["uti"], [], "Gets user's ID", async (...args: stri
 //   }))
 // })
 
-// ConsoleCommand("friend", [], [], "Return Friend OBJ", async (...args: string[]) => {
-//   print(JSON.stringify(Friends.getByID(args.join(" "))))
-// })
+ConsoleCommand("friend", [], [], "Return Friend OBJ", async (...args: string[]) => {
+  print(JSON.stringify(Artists.getByID(args.join(" "))))
+})
 
 // ConsoleCommand("blink", [], [], "Blinks", async (...args: string[]) => {
 //   let res = await obs.call("GetSceneItemTransform", {sceneName: "Main - Focus WHATEVER", sceneItemId: 1})

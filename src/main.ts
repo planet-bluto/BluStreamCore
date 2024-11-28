@@ -13,6 +13,7 @@ import "./lib/arrayLib.js"
 
 
 // Modules
+import "./modules/artists" // Artists and Shoutouts hookup & processing
 import "./modules/twitch" // Twitch API related hookup & processing
 import "./modules/messages" // Chat Browser SRC hookup & porcessing
 import "./modules/obs" // OBS Web Socket hookup & processing

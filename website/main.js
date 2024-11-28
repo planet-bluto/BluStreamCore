@@ -9,8 +9,8 @@
 socket.on("connect", async () => {
   print("Greetings...")
   await socket.emitWithAck("sub_control_panel")
-  
-  socket.emit("request_friends")
+
+  socket.emit("request_artists")
   socket.emit("request_popups")
   socket.emit("request_emotes")
 
@@ -46,14 +46,14 @@ socket.on("chatter_push", userObj => {
 var shoutoutsInput = new Elem("shoutouts-input")
 var shoutoutsButton = new Elem("shoutouts-button")
 var shoutoutsList = new Elem("shoutouts-list")
-socket.on("friends_received", friends => {
+socket.on("artists_received", artists => {
   shoutoutsList.clear()
-  friends.forEach(friend => {
-    // print(friend.id)
-    if (friend.id == null || friend.id == "") { return }
+  artists.forEach(artist => {
+    // print(artist.id)
+    if (artist.id == null || artist.id == "") { return }
     var this_elem = new Elem("option")
-    this_elem.elem.value = friend.id
-    this_elem.text = friend.name
+    this_elem.elem.value = artist.id
+    this_elem.text = artist.name
 
     shoutoutsList.addChild(this_elem)
   })
