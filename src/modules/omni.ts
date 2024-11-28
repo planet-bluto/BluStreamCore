@@ -5,6 +5,7 @@ import { MessageHelper } from "./messages";
 
 export class OmniMusicClass extends EventEmitter {
   _socket: Socket;
+  _active_lowers: {[index: string]: boolean} = {};
 
   constructor() {
     super()
@@ -41,6 +42,22 @@ export class OmniMusicClass extends EventEmitter {
   async play_track_next(userName: string, trackURL: string) {
     var track = await this._socket.emitWithAck("$stream_play_next", [userName, trackURL])
     return track
+  }
+
+  async reduceVolume(id: string) {
+    let alreadyLowered = Object.values(this._active_lowers).some(val => val)
+    this._active_lowers[id] = true
+
+    if (!alreadyLowered) {
+      this._socket.emit("$stream_set_volume", [0.1])
+    }
+  }
+
+  async raiseVolume(id: string | null = null) {
+    if (id != null) { this._active_lowers[id] = false }
+
+    let lowered = Object.values(this._active_lowers).some(val => val)
+    if (!lowered || id == null) { this._socket.emit("$stream_set_volume", [1.0]) }
   }
 }
 

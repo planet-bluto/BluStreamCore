@@ -1,6 +1,7 @@
 import { WebSocketServer } from 'ws'
-import { OmniMusicClass } from './omni'
+import { OmniMusic, OmniMusicClass } from './omni'
 import { OBS } from './obs'
+import { TwitchEvents } from './twitch'
 
 const wss = new WebSocketServer({port: Number(process.env.OVERLAY_PORT)})
 
@@ -191,8 +192,43 @@ wss.on('connection', function connection(ws) {
 
 Godot.on("shoutout_start", (artist: any) => {
   OBS.shoutoutVisible = true
+  setTimeout(() => {
+    OmniMusic.reduceVolume("shoutout")
+  }, 1200)
 })
 
 Godot.on("shoutout_end", (artist: any) => {
   OBS.shoutoutVisible = false
+  setTimeout(() => {
+    OmniMusic.raiseVolume("shoutout")
+  }, 1200)
+})
+
+Godot.on("debug", (type: string, user: string, content: string, number: number) => {
+  switch (type) {
+    case "prompt":
+      TwitchEvents.emit("prompt", user, content)
+    break;
+    case "sub":
+      TwitchEvents.emit("sub", user, number, content)
+    break;
+    case "giftsub":
+      TwitchEvents.emit("giftsub", user, number)
+    break;
+    case "raid":
+      TwitchEvents.emit("raid", user, number)
+    break;
+    case "bit":
+      TwitchEvents.emit("bit", user, number, content)
+    break;
+    case "hypetrain":
+      TwitchEvents.emit("hypetrain", (number == 0 ? null : number))
+    break;
+    case "shoutout":
+      TwitchEvents.emit("shoutout", user)
+    break;
+    case "ad":
+      TwitchEvents.emit("ad_5_sec_warn", user)
+    break;
+  }
 })
