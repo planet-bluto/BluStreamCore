@@ -13,6 +13,7 @@ import "./lib/arrayLib.js"
 
 
 // Modules
+import "./modules/blu_stream_db" // BluStreamDB hookup & processing
 import "./modules/artists" // Artists and Shoutouts hookup & processing
 import "./modules/twitch" // Twitch API related hookup & processing
 import "./modules/messages" // Chat Browser SRC hookup & porcessing

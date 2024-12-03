@@ -130,6 +130,7 @@ Promise.all([
 ]).then(() => {
   chatClient.onMessage(appendTwitchMessage)
   chatClient.onMessage(parseChatCommand)
+  chatClient.onMessage(trackMessage)
   // chatClient.onMessage(trackActivity)
 })
 
@@ -145,6 +146,7 @@ getAllBadges()
 
 // CHAT PROCESSING
 import sanitizeHtml from 'sanitize-html'
+import { BluStreamDB, chargeSpark } from './blu_stream_db'
 
 function appendTwitchMessage(channel: string, user: string, text: string, msg: ChatMessage) {
   if (text.startsWith("!")) {return} // no slashies... >:(
@@ -200,6 +202,16 @@ function appendTwitchMessage(channel: string, user: string, text: string, msg: C
       twitch: true,
       userId: msg.userInfo.userId
     }
+  })
+}
+
+async function trackMessage(channel: string, user: string, text: string, msg: ChatMessage) {
+  await chargeSpark(msg.userInfo.userId, ["CHAT"])
+
+  let action = await BluStreamDB.POST("/activity", {
+    chatterId: msg.userInfo.userId,
+    type: "chat", 
+    data: JSON.stringify({ text: msg.text })
   })
 }
 

@@ -11,6 +11,9 @@ export interface IProcessEnv {
 
   NOTION_SECRET: string;
   NEKOWEB_KEY: string;
+
+  DB_HOST: string;
+  DB_TOKEN: string;
 }
 
 declare global {
