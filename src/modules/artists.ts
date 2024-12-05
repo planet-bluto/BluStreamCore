@@ -313,8 +313,6 @@ if (no_artist_change) {
   })
 }
 
-print("\n\n\n", no_artist_change, last_artists[0], current_artists[0])
-
 if (!no_artist_change) {
   print("[ARTIST] Found changes to artists, pushing to website!")
   fs.writeFile("artists.json", JSON.stringify(serialized_artist_data, null, 4))

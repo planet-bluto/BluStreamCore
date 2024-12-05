@@ -5,7 +5,8 @@
   "main": "dist/main.js",
   "scripts": {
     "build": "tsc",
-    "start": "nodemon --exec ts-node src/main.ts --ignore *.json --ignore /output"
+    "start": "ts-node src/main.ts",
+    "dev": "nodemon --exec ts-node src/main.ts --ignore *.json --ignore /output"
   },
   "keywords": [],
   "author": "PLANET_BLUTO",

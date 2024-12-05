@@ -9,6 +9,7 @@ import "./extends/print"
 import "./extends/unique"
 import "./extends/array"
 import "./lib/arrayLib.js"
+import "./lib/stringLib.js"
 
 
 
