@@ -9,6 +9,7 @@ import "./extends/print"
 import "./extends/unique"
 import "./extends/array"
 import "./lib/arrayLib.js"
+import "./extends/string"
 import "./lib/stringLib.js"
 
 
@@ -25,6 +26,7 @@ import "./modules/godot" // Godot Overlay hookup & processing
 import "./modules/omni" // Omni hookup & processing
 import "./modules/discord" // Discord Client hookup & processing
 import "./modules/hourglass" // Hourglass hookup & processing
+import "./modules/blubotai" // Hourglass hookup & processing
 
 import { startWebServer } from './modules/web_server' // HTTP & WS Server configuration
 

@@ -14,6 +14,9 @@ export interface IProcessEnv {
 
   DB_HOST: string;
   DB_TOKEN: string;
+
+  BLUBOT_HOST: string;
+  BLUBOT_TOKEN: string;
 }
 
 declare global {

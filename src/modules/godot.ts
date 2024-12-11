@@ -169,6 +169,12 @@ wss.on('connection', function connection(ws) {
 
         Godot.emit("debug", sub_msg.type, sub_msg.user, content, number)
       break;
+      case 'blubot_speak_start':
+        OmniMusic.reduceVolume("blubot_speaking", ((1.0) / (3.0)))
+      break;
+      case 'blubot_speak_end':
+        OmniMusic.raiseVolume("blubot_speaking")
+      break;
       case 'ad_response':
         Godot.AD_REQUESTS[msg.args[0]](msg.args[1])
       break;

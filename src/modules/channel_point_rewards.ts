@@ -98,6 +98,19 @@ async function customRewardCheck() {
 
 
 // Import Rewards
-
+// General
 import "../rewards/ping" // comment this one out yeah yehah eyaheyh
+// Charges
 import "../rewards/charge"
+// BluBot
+import "../rewards/bb_prompt"
+import "../rewards/bb_say"
+// Popups
+import "../rewards/popup_roulette"
+import "../rewards/popup_ad"
+// Song
+import "../rewards/song_like"
+import "../rewards/song_request"
+import "../rewards/song_now"
+// Submit Assets
+import "../rewards/submit_bumper"

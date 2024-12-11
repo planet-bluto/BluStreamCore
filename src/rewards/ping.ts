@@ -2,6 +2,7 @@ import { TwitchChannelPointReward } from "../modules/channel_point_rewards";
 import { EventSubChannelRedemptionAddEvent } from "@twurple/eventsub-base";
 import { twitchAutoMSG } from "../modules/twitch";
 import { MessageHelper } from "../modules/messages";
+import { BluBotAI } from "../modules/blubotai";
 
 export const PingReward = new TwitchChannelPointReward("PING",
   {
@@ -15,6 +16,7 @@ export const PingReward = new TwitchChannelPointReward("PING",
     isEnabled: true
   },
   (event: EventSubChannelRedemptionAddEvent) => {
+    BluBotAI.Ping(event.userDisplayName)
     twitchAutoMSG("Pong! (from Channel Point Reward)")
     MessageHelper.add({
       header: "Ping!",

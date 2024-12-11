@@ -28,7 +28,7 @@ import { ApiClient, HelixChatBadgeSet } from '@twurple/api'
 export const apiClient = new ApiClient({ authProvider })
 
 import { EventSubWsListener } from '@twurple/eventsub-ws';
-import { EventSubChannelCheerEvent, EventSubChannelFollowEvent, EventSubChannelHypeTrainBeginEvent, EventSubChannelHypeTrainEndEvent, EventSubChannelRaidEvent, EventSubChannelSubscriptionEvent, EventSubChannelSubscriptionGiftEvent, EventSubChannelSubscriptionMessageEvent } from '@twurple/eventsub-base';
+import { EventSubChannelCheerEvent, EventSubChannelFollowEvent, EventSubChannelHypeTrainBeginEvent, EventSubChannelHypeTrainEndEvent, EventSubChannelRaidEvent, EventSubChannelRedemptionAddEvent, EventSubChannelSubscriptionEvent, EventSubChannelSubscriptionGiftEvent, EventSubChannelSubscriptionMessageEvent } from '@twurple/eventsub-base';
 export const twitchListener = new EventSubWsListener({ apiClient })
 
 import EventEmitter from 'eventemitter3'
@@ -47,29 +47,36 @@ chatClient.onMessageFailed(print)
 chatClient.onNoPermission(print)
 chatClient.onAuthenticationSuccess(print)
 
-// User Colors
+// User Cache
 var chatterIdCache: {[index: string]: string} = {}
 var chatterColorCache: {[index: string]: string} = {}
+var chatterBadgeCache: {[index: string]: string[]} = {}
 
-export async function getUserId(userDisplayName: string) {
-  let userId;
+export async function userResolveID(userResolvable: string) {
+  if (chatterIdCache[userResolvable]) { return chatterIdCache[userResolvable] }
 
-  if (Object.keys(chatterIdCache).includes(userDisplayName)) {
-    userId = chatterIdCache[userDisplayName]
-  } else {
-    userId = (await apiClient.users.getUserByName(userDisplayName))?.id
+  try {
+    let userById = await apiClient.users.getUserById(userResolvable)
+    if (userById) { return userById.id }
+  } catch(err) {
+    // ...
   }
 
-  return userId
+  try {
+    let userByName = await apiClient.users.getUserByName(userResolvable)
+    if (userByName) { return userByName.id }
+  } catch(err) {
+    // ...
+  }
 }
 
-export async function getUserColor(userDisplayName: string) {
+export async function getUserColor(userResolvable: string) { // ID, then DisplayName
   let returnColor = "#ffffff";
 
-  if (chatterColorCache[userDisplayName]) {
-    returnColor = chatterColorCache[userDisplayName] // Try cached color first...
+  if (chatterColorCache[userResolvable]) {
+    returnColor = chatterColorCache[userResolvable] // Try cached color first...
   } else {
-    let userId = await getUserId(userDisplayName)
+    let userId = await userResolveID(userResolvable)
     if (userId) {
       let color = await apiClient.chat.getColorForUser(userId)
       if (color) {
@@ -79,6 +86,19 @@ export async function getUserColor(userDisplayName: string) {
   }
 
   return returnColor
+}
+
+export async function getUserBadges(userResolvable: string) {
+  let returnBadges: string[] = [];
+
+  if (chatterBadgeCache[userResolvable]) {
+    returnBadges = chatterBadgeCache[userResolvable] // Try cached color first...
+  } else {
+    let userId = await userResolveID(userResolvable)
+    if (userId) { returnBadges = chatterBadgeCache[userId] }
+  }
+
+  return returnBadges
 }
 
 export async function twitchAutoMSG(text: string, replyTo: (ChatMessage | 2026 | null) = null, includePrefix: boolean = true) {
@@ -130,8 +150,6 @@ Promise.all([
 ]).then(() => {
   chatClient.onMessage(appendTwitchMessage)
   chatClient.onMessage(parseChatCommand)
-  chatClient.onMessage(trackMessage)
-  // chatClient.onMessage(trackActivity)
 })
 
 // GET ALL BADGES
@@ -146,9 +164,10 @@ getAllBadges()
 
 // CHAT PROCESSING
 import sanitizeHtml from 'sanitize-html'
-import { BluStreamDB, chargeSpark } from './blu_stream_db'
+import { BluStreamDB, chargeSpark, trackActivity } from './blu_stream_db'
+import { BluBotAI } from './blubotai'
 
-function appendTwitchMessage(channel: string, user: string, text: string, msg: ChatMessage) {
+async function appendTwitchMessage(channel: string, user: string, text: string, msg: ChatMessage) {
   if (text.startsWith("!")) {return} // no slashies... >:(
 
   // Colors
@@ -168,6 +187,13 @@ function appendTwitchMessage(channel: string, user: string, text: string, msg: C
     if (!badgeVersion) { return null }
     return badgeVersion.getImageUrl(2)
   }).filter(badgeUrl => (badgeUrl != null))
+
+  chatterBadgeCache[msg.userInfo.userId] = userBadges
+
+  if (msg.rewardId != null) { return }
+
+  await chargeSpark(msg.userInfo.userId, ["CHAT"])
+  await trackActivity(msg.userInfo.userId, "chat", { text: msg.text })
 
   // Text Emote Parsing and Cleaning :)
   let current_text = sanitizeHtml(text)
@@ -202,16 +228,6 @@ function appendTwitchMessage(channel: string, user: string, text: string, msg: C
       twitch: true,
       userId: msg.userInfo.userId
     }
-  })
-}
-
-async function trackMessage(channel: string, user: string, text: string, msg: ChatMessage) {
-  await chargeSpark(msg.userInfo.userId, ["CHAT"])
-
-  let action = await BluStreamDB.POST("/activity", {
-    chatterId: msg.userInfo.userId,
-    type: "chat", 
-    data: JSON.stringify({ text: msg.text })
   })
 }
 
@@ -272,4 +288,50 @@ twitchListener.onChannelHypeTrainBegin(process.env.CHANNEL_ID, async (event: Eve
 })
 twitchListener.onChannelHypeTrainEnd(process.env.CHANNEL_ID, async (event: EventSubChannelHypeTrainEndEvent) => {
   TwitchEvents.emit("hypetrain", event.level)
+})
+
+
+export async function fulfill(event: EventSubChannelRedemptionAddEvent, cancel = false) {
+  var fulfilled = false
+
+  try {
+    await event.updateStatus(cancel ? "CANCELED" : "FULFILLED")
+    fulfilled = true
+  } catch(err) {
+    print("Oh hell no", err)
+  }
+
+  return fulfilled
+}
+
+const BluBotEmojiMap = {
+  "SHOCK": "😱",
+  "MAD": "😡",
+  "THANK": "🙏",
+  "CONFUSED": "❔",
+  "THREAT": "🔪",
+  "EYEROLL": "🙄",
+}
+
+BluBotAI.on("output", async (output: {mood: string; content: string}[]) => {
+  var raw_lines = output.map(line => line.content)
+  var lines = output.map(line => {
+    return `${BluBotEmojiMap[line.mood as keyof typeof BluBotEmojiMap]} ${line.content}`
+  })
+
+  var text = lines.join("\n")
+  // client.channels WHAT THE FUCK DO YOU MEAN YOU HAVEN'T USED DISCORD.JS ONCE YET??
+
+  var raw_text = raw_lines.join(" ")
+  MessageHelper.add({
+    badges: ["./assets/icons/blubot.png"],
+    header: "[  / >] BLU_BOT", 
+    content: raw_text, 
+    platform: "twitch", 
+    style: {
+      header_color: "#8CD612",
+      header_format: false,
+    }
+  })
+  await twitchAutoMSG(raw_text)
 })

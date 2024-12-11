@@ -1,15 +1,19 @@
 import EventEmitter from "eventemitter3";
 import { io, Socket } from "socket.io-client";
-import { twitchAutoMSG } from "./twitch";
+import { fulfill, getUserBadges, getUserColor, twitchAutoMSG } from "./twitch";
 import { MessageHelper } from "./messages";
+import { EventSubChannelRedemptionAddEvent } from "@twurple/eventsub-base";
+import { chargeSpark, trackActivity } from "./blu_stream_db";
+import { ChargePresets } from "../types/charge_presets";
+import { ChargeTypeInfo } from "../types/charge_type";
 
 export class OmniMusicClass extends EventEmitter {
   _socket: Socket;
-  _active_lowers: {[index: string]: boolean} = {};
+  _active_lowers: {[index: string]: null | number} = {};
 
   constructor() {
     super()
-    this._socket = io("http://localhost:8080/")
+    this._socket = io("http://localhost:8080")
     this._socket.on("connect", () => {
       print("+ Omni Socket")
       this._socket.emit("$reg_nowplaying")
@@ -44,20 +48,20 @@ export class OmniMusicClass extends EventEmitter {
     return track
   }
 
-  async reduceVolume(id: string) {
-    let alreadyLowered = Object.values(this._active_lowers).some(val => val)
-    this._active_lowers[id] = true
+  async reduceVolume(id: string, volume = 0.1) {
+    let theLowest = Object.values(this._active_lowers).every(val => (val == null || volume < val))
+    this._active_lowers[id] = volume
 
-    if (!alreadyLowered) {
-      this._socket.emit("$stream_set_volume", [0.1])
+    if (theLowest) {
+      this._socket.emit("$stream_set_volume", [volume])
     }
   }
 
   async raiseVolume(id: string | null = null) {
-    if (id != null) { this._active_lowers[id] = false }
+    if (id != null) { this._active_lowers[id] = null }
 
-    let lowered = Object.values(this._active_lowers).some(val => val)
-    if (!lowered || id == null) { this._socket.emit("$stream_set_volume", [1.0]) }
+    let byLowest = Object.values(this._active_lowers).sort((valA, valB) => { return (valA || 1) - (valB || 1) })
+    this._socket.emit("$stream_set_volume", [(byLowest[0] || 1.0)])
   }
 }
 
@@ -84,3 +88,42 @@ OmniMusic.on("nowplaying", event => {
     }
   })
 })
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+export async function song_queue_reward(type: "queue_track" | "play_track_next", event: EventSubChannelRedemptionAddEvent) {
+  let local_reward_id = (type == "play_track_next" ? "SONG_NOW" : "SONG_REQUEST")
+  
+  var infoProms = await Promise.all([
+    OmniMusic[type](event.userDisplayName, event.input),
+    getUserColor(event.userDisplayName),
+  ])
+  var track = infoProms[0]
+  let userColor = infoProms[1]
+
+  var success = (track != null)
+  if (success) {
+    twitchAutoMSG(`@${event.userDisplayName} Added '${track.title} - ${track.author.name}' to${type == "play_track_next" ? " priority" : ""} queue!`)
+    MessageHelper.add({
+      badges: ["./assets/icons/song.png"],
+      header: event.userDisplayName,
+      content: `${type == "play_track_next" ? "High Priority " : ""}Song Request: <span style="color: #ffffff">[<img class="emoji" alt="${track.service.code}" src="./assets/omni_icons/${track.service.code}.png"> ${track.title} - ${track.author.name}]</span>`,
+      platform: "twitch",
+      style: {
+        header_color: userColor,
+        border_color: ChargeTypeInfo[ChargePresets[local_reward_id].type].color
+      }
+    })
+  } else {
+    // appendMessage(event.userDisplayName, event.input, "twitch", `color: ${userColor}`, [], userBadges)
+    twitchAutoMSG(`@${event.userDisplayName} Error occured... :^(`)
+  }
+
+  await fulfill(event, !success)
+  if (success) {
+    await chargeSpark(event.userId, [(type == "play_track_next" ? "SONG_NOW" : "SONG_REQUEST")])
+    await trackActivity(event.userId, "song_request", track.omni_id)
+  }
+
+  // print(`From REDEEMPTION, got MSG: `, REDEEM_MSGS[event.id])
+}

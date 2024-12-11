@@ -1,31 +1,31 @@
 import EventEmitter from "eventemitter3";
-import request from "sync-request";
 import { io } from "socket.io-client";
 import { Godot } from "./godot";
 import { apiClient, getUserColor, twitchAutoMSG } from "./twitch";
 import { HelixUser } from "@twurple/api";
 import { MessageHelper } from "./messages";
+import axios, { AxiosInstance } from "axios";
 
 const ClientIO = io(process.env.DB_HOST)
 
 class BluStreamDBClass extends EventEmitter {
   host: string = process.env.DB_HOST;
   token: string = process.env.DB_TOKEN;
+  _axios: AxiosInstance;
   constructor() {
     super();
-  }
-  
-  async _base_request(method: ("GET" | "POST" | "PATCH" | "PUT" | "DELETE"), path: string, body: object) {
-    let res = await request(method, (this.host+path), {
-      json: body,
+    this._axios = axios.create({
+      baseURL: this.host,
       headers: {
         authorization: `Bearer ${this.token}`
       }
     })
+  }
+  
+  async _base_request(method: ("GET" | "POST" | "PATCH" | "PUT" | "DELETE"), url: string, data: object) {
+    let res = await this._axios({ url, method, data })
 
-    let resBody = JSON.parse((await res.getBody()).toString())
-
-    return resBody
+    return res.data
   }
 
   async GET(path: string, body: object = {}) {
@@ -52,10 +52,32 @@ class BluStreamDBClass extends EventEmitter {
 
 export const BluStreamDB = new BluStreamDBClass()
 
-export function chargeSpark(chatterId: string, charges: (string | {type: string, amount: number})[]) {
-  return BluStreamDB.PUT(`/sparks/${chatterId}`, charges)
+export async function chargeSpark(chatterId: string, charges: (string | {type: string, amount: number})[]) {
+  let stream = await getCurrentStream()
+  return BluStreamDB.PUT(`/sparks/${chatterId}`, {
+    streamId: stream.id,
+    charges
+  })
 }
 
+export async function trackActivity(chatterId: string, type: string, data: any) {
+  let stream = await getCurrentStream()
+  print(stream)
+  return BluStreamDB.POST(`/activity`, {
+    chatterId,
+    streamId: stream.id,
+    type,
+    data
+  })
+}
+
+export function getCurrentStream() {
+  return BluStreamDB.GET(`/stream`)
+}
+
+export function trackStreamStart() {
+  return BluStreamDB.POST(`/streams`)
+}
 
 ClientIO.on("connect", () => {
   print("+ DB Socket")
@@ -69,7 +91,7 @@ ClientIO.onAny( async (eventName: string, spark, ...args) => {
     spark["user"] = { // Might do this on the Database...
       id: twitchUser.id,
       displayName: twitchUser.displayName,
-      color: (await getUserColor(twitchUser.displayName)),
+      color: (await getUserColor(twitchUser.id)),
       profilePictureUrl: twitchUser.profilePictureUrl,
     }
 

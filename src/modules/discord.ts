@@ -237,6 +237,11 @@ export async function setDiscordSocket(socket: Socket) {
 
 VoiceChat.on("speak", (speaker) => {
   // print(`${speaker.name} ${(speaker.speaking ? "is now" : "has stopped")} speaking!`)
+  // if (speaker.speaking) {
+  //   OmniMusic.reduceVolume(`speak_${speaker.id}`, (speaker.id == "334039742205132800" ? 0.4 : 0.7))
+  // } else {
+  //   OmniMusic.raiseVolume(`speak_${speaker.id}`)
+  // }
   Godot.send_voice_event("speak", speaker)
 })
 
