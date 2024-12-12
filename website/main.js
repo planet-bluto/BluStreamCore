@@ -262,6 +262,7 @@ new Elem("stream-form-category-select").on("change", e => {
 })
 
 socket.emitWithAck("get_title_header").then((res) => {
+  print(res)
   new Elem("stream-form-header").elem.value = res.header
   new Elem("stream-form-title").elem.value = res.title
 })
