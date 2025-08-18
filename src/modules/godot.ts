@@ -2,6 +2,7 @@ import { WebSocketServer } from 'ws'
 import { OmniMusic, OmniMusicClass } from './omni'
 import { OBS } from './obs'
 import { TwitchEvents } from './twitch'
+import { VoiceChat } from './discord';
 
 const wss = new WebSocketServer({port: Number(process.env.OVERLAY_PORT)})
 
@@ -153,6 +154,7 @@ wss.on('connection', function connection(ws) {
   print("+ Godot Socket")
   Godot.connected = true
   Godot.emit("connected", idx)
+  Godot.send_voice_join_event(VoiceChat.speakers, idx)
 
   const This_OmniMusic = new OmniMusicClass()
   This_OmniMusic._socket.onAny(Godot.send_omni_event)

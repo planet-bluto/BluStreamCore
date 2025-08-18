@@ -3,7 +3,7 @@ import { EventSubChannelRedemptionAddEvent } from '@twurple/eventsub-base';
 import { ChargePresets } from "../types/charge_presets";
 import { ChargeTypeInfo } from "../types/charge_type";
 import { BluStreamDB, chargeSpark } from "../modules/blu_stream_db";
-import { fulfill } from "../modules/twitch";
+import { fulfill, twitchAutoMSG } from "../modules/twitch";
 import { Godot } from "../modules/godot";
 
 const local_reward_id = "POPUP_AD"
@@ -25,9 +25,9 @@ export const Reward = new TwitchChannelPointReward(local_reward_id,
     if (chatter && chatter.popup) {
       await Godot.spawnPopup(chatter.popup)
       await chargeSpark(event.userId, [local_reward_id])
-      // await BluStreamDB.PUT(`/sparks/${event.userId}`, [local_reward_id])
       await fulfill(event)
     } else {
+      await twitchAutoMSG(`@${event.userDisplayName} You don't have a Popup AD set, use the Popup Roulette reward to get one! (points refunded)`)
       await fulfill(event, true)
     }
   }

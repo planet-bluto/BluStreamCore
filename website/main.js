@@ -123,7 +123,7 @@ zoomPreview.elem.width = 1920
 zoomPreview.elem.height = 1080
 
 const options = {audio: false, video: true}
-navigator.mediaDevices.getDisplayMedia(options).then(handleSuccess, handleError)
+// navigator.mediaDevices.getDisplayMedia(options).then(handleSuccess, handleError)
 
 
 function handleSuccess(stream) {
@@ -142,13 +142,18 @@ function getZoomBounds() {
   return zoomBounds
 }
 
+var zoomImage = new Image()
+zoomImage.src = "/assets/ref.png"
 var zoomTransform = {x: 1920/2, y: 1080/2, scale: 1.0}
 function drawFrame() {
   var zoomBounds = getZoomBounds()
   var obsBounds = getOBSZoomBounds()
 
-  zoomInputCTX.drawImage(video_elem.elem, 0, 0, 1920, 1080)
-  zoomPreviewCTX.drawImage(video_elem.elem, obsBounds.x, obsBounds.y, obsBounds.w, obsBounds.h)
+  // zoomInputCTX.drawImage(video_elem.elem, 0, 0, 1920, 1080)
+  // zoomPreviewCTX.drawImage(video_elem.elem, obsBounds.x, obsBounds.y, obsBounds.w, obsBounds.h)
+  // zoomInputCTX.fillStyle = "#0d0d0d"
+  zoomInputCTX.drawImage(zoomImage, 0, 0, 1920, 1080)
+  zoomPreviewCTX.drawImage(zoomImage, obsBounds.x, obsBounds.y, obsBounds.w, obsBounds.h)
 
   zoomInputCTX.fillStyle = "#024aca7c"
   zoomInputCTX.fillRect(zoomBounds.x, zoomBounds.y, zoomBounds.w, zoomBounds.h)

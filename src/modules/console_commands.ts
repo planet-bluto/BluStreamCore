@@ -1,6 +1,6 @@
 import { Artists } from "./artists"
 import { Godot } from "./godot"
-import { apiClient } from "./twitch"
+import { apiClient, TwitchMessageSettings } from "./twitch"
 import { SocketIO } from "./web_server"
 
 const readline = require('node:readline')
@@ -17,7 +17,7 @@ rl.on("line", (input: string) => {
   }
 })
 
-function ConsoleCommand(name: string, aliases: string[], args: string[], desc: string, func: Function) {
+export function ConsoleCommand(name: string, aliases: string[], args: string[], desc: string, func: Function) {
   ConsoleCommands[name] = {args, desc, aliases, func}
   mains.push(name)
   aliases.forEach(alias => {
@@ -196,6 +196,11 @@ ConsoleCommand("user_to_id", ["uti"], [], "Gets user's ID", async (...args: stri
 
 ConsoleCommand("friend", [], [], "Return Friend OBJ", async (...args: string[]) => {
   print(JSON.stringify(Artists.getByID(args.join(" "))))
+})
+
+ConsoleCommand("toggle_auto_messages", ["tam"], [], "Toggles whether BluBot auto messaging is on (For Co-Streaming)", async (...args: string[]) => {
+  TwitchMessageSettings.autoMessagesEnabled = !TwitchMessageSettings.autoMessagesEnabled
+  print(`Auto Messages: ${TwitchMessageSettings.autoMessagesEnabled ? "Enabled" : "Disabled"}`)
 })
 
 // ConsoleCommand("blink", [], [], "Blinks", async (...args: string[]) => {

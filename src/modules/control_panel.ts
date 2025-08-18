@@ -4,10 +4,11 @@ import express from 'express';
 import { app, setupRoom } from "./web_server"
 import { Socket } from "socket.io";
 import { Godot } from "./godot";
-import { apiClient } from "./twitch";
+import { apiClient, timeout } from "./twitch";
 import { ConsoleCommands } from "./console_commands";
 import { Artists, shoutout } from "./artists";
 import { OBS } from "./obs";
+import { start_end_screen } from "./end_screen";
 
 const WEBSITE_PATH = path.resolve(__dirname, "../../website")
 
@@ -45,11 +46,11 @@ setupRoom("control_panel", (socket: Socket, callback: Function) => {
 
   socket.on("spawn_popup", (popup_id) => { Godot.spawnPopup(popup_id) })
 
-  // socket.on("chatter_timeout", (twitch_id, duration) => { timeout(twitch_id, duration) })
+  socket.on("chatter_timeout", (twitch_id, duration) => { timeout(twitch_id, duration) })
 
   socket.on("stream_start", () => { OBS.start() })
 
-  // socket.on("start_end_screen", () => { start_end_screen() })
+  socket.on("start_end_screen", () => { start_end_screen() })
   
   socket.on("get_title_header", async (callback) => {
     let res = await apiClient.channels.getChannelInfoById(process.env.CHANNEL_ID)

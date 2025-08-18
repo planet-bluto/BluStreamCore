@@ -155,6 +155,19 @@ export async function setDiscordSocket(socket: Socket) {
         }
       }
 
+      async function blu_cmd_queue() {
+        var queue = await OmniMusic["fetch_queue"]()
+
+        if (queue.length > 0) {
+          let resString = queue.map((entry: any, ind: number) => `${ind+1}. **${entry.title} - ${entry.author.name}** *(queued by: **${entry.queuer}**)*`).join("\n")
+          
+          await discordSocket.emitWithAck("send_message", msg.channel_id, ("### Play Next Queue: \n\n" + resString))
+        } else {
+          await discordSocket.emitWithAck("send_message", msg.channel_id, "The queue is empty, FOOL!!")
+        }
+        
+      }
+
       switch (cmd) {
         case 'ping':
           await discordSocket.emitWithAck("send_message", msg.channel_id, `Pong!`)
@@ -170,6 +183,12 @@ export async function setDiscordSocket(socket: Socket) {
         break;
         case 'np':
           blu_cmd_nowPlaying()
+        break;
+        case 'queue':
+          blu_cmd_queue()
+        break;
+        case 'q':
+          blu_cmd_queue()
         break;
       }
     }
@@ -238,7 +257,7 @@ export async function setDiscordSocket(socket: Socket) {
 VoiceChat.on("speak", (speaker) => {
   // print(`${speaker.name} ${(speaker.speaking ? "is now" : "has stopped")} speaking!`)
   // if (speaker.speaking) {
-  //   OmniMusic.reduceVolume(`speak_${speaker.id}`, (speaker.id == "334039742205132800" ? 0.4 : 0.7))
+  //   OmniMusic.reduceVolume(`speak_${speaker.id}`, (speaker.id == "334039742205132800" ? 0.4 : 0.8))
   // } else {
   //   OmniMusic.raiseVolume(`speak_${speaker.id}`)
   // }

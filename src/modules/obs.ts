@@ -1,5 +1,6 @@
 import { exec } from 'child_process';
 import { OBSWebSocket } from 'obs-websocket-js';
+import { ConsoleCommand } from './console_commands';
 const obs = new OBSWebSocket()
 
 class OBSClass {
@@ -28,8 +29,8 @@ class OBSClass {
     })
   
     // Switch to right profile and collection
-    await obs.call("SetCurrentProfile", {profileName: "LIVE"})
-    await obs.call("SetCurrentSceneCollection", {sceneCollectionName: "LIVE"})
+    await obs.call("SetCurrentProfile", {profileName: "PLANET_BLUTO_LIVE"})
+    await obs.call("SetCurrentSceneCollection", {sceneCollectionName: "PLANET_BLUTO_LIVE"})
   
     // Turn on render delay!!
     var filterRes = await obs.call("GetSourceFilterList", {sourceName: "Main (Delayed)"})
@@ -42,6 +43,17 @@ class OBSClass {
         })
       }
     })
+
+    // Turn on audio delay!!
+    let {inputs} = await obs.call("GetInputList", {inputKind: 'wasapi_input_capture'})
+    if (Array.isArray(inputs)) {
+      await inputs.awaitForEach(async (input: any) => {
+        await obs.call("SetInputAudioSyncOffset", {
+          inputUuid: input.inputUuid,
+          inputAudioSyncOffset: 1000
+        })
+      })
+    }
   
     // Switch to Starting Soon Scene...
     await obs.call("SetCurrentProgramScene", {sceneName: "Starting Soon"})
@@ -85,6 +97,17 @@ class OBSClass {
         })
       }
     })
+
+    // Turn OFF audio delay!!
+    let {inputs} = await obs.call("GetInputList", {inputKind: 'wasapi_input_capture'})
+    if (Array.isArray(inputs)) {
+      await inputs.awaitForEach(async (input: any) => {
+        await obs.call("SetInputAudioSyncOffset", {
+          inputUuid: input.inputUuid,
+          inputAudioSyncOffset: 0
+        })
+      })
+    }
   
     // Switch to Starting Soon Scene...
     await obs.call("SetCurrentProgramScene", {sceneName: "Main - Default"})
@@ -131,3 +154,17 @@ function tryConnectOBS() {
 }
 
 tryConnectOBS()
+
+ConsoleCommand("turn_off_audio_delay", [], [], "Turns off audio delay", async () => {
+  let {inputs} = await obs.call("GetInputList", {inputKind: 'wasapi_input_capture'})
+  if (Array.isArray(inputs)) {
+    await inputs.awaitForEach(async (input: any) => {
+      let res = await obs.call("SetInputAudioSyncOffset", {
+        inputUuid: input.inputUuid,
+        inputAudioSyncOffset: 0
+      })
+
+      print(res)
+    })
+  }
+})

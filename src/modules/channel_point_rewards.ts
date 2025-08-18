@@ -99,7 +99,7 @@ async function customRewardCheck() {
 
 // Import Rewards
 // General
-import "../rewards/ping" // comment this one out yeah yehah eyaheyh
+// import "../rewards/ping" // comment this one out yeah yehah eyaheyh
 // Charges
 import "../rewards/charge"
 // BluBot

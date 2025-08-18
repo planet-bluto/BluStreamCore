@@ -15,6 +15,12 @@ export const authProvider = new RefreshingAuthProvider({
   clientSecret: process.env.TWITCH_CLIENT_SECRET
 })
 
+class TwitchMessageSettingsClass {
+  autoMessagesEnabled: boolean = true
+}
+
+export const TwitchMessageSettings = new TwitchMessageSettingsClass()
+
 authProvider.onRefresh(async (userId, newTokenData) => {fs.writeFile(TOKEN_STORE_PATH, JSON.stringify(newTokenData, null, 4), "utf-8")})
 authProvider.addUser(process.env.CHANNEL_ID, tokenData )
 authProvider.addIntentsToUser(process.env.CHANNEL_ID, ['chat'])
@@ -166,8 +172,12 @@ getAllBadges()
 import sanitizeHtml from 'sanitize-html'
 import { BluStreamDB, chargeSpark, trackActivity } from './blu_stream_db'
 import { BluBotAI } from './blubotai'
+import { SocketIO } from './web_server'
 
 async function appendTwitchMessage(channel: string, user: string, text: string, msg: ChatMessage) {
+  print(msg)
+  SocketIO.emit("chatter_push", {id: msg.userInfo.userId, username: msg.userInfo.userName})
+
   if (text.startsWith("!")) {return} // no slashies... >:(
 
   // Colors
@@ -335,3 +345,8 @@ BluBotAI.on("output", async (output: {mood: string; content: string}[]) => {
   })
   await twitchAutoMSG(raw_text)
 })
+
+export async function timeout(userId: string, duration?: number) {
+  print(`> Pretend I banned ${userId} right now...`)
+  await apiClient.moderation.banUser(process.env.CHANNEL_ID, {user: userId, duration, reason: "I said so, bitch"})
+}

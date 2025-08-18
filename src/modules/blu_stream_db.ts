@@ -1,7 +1,7 @@
 import EventEmitter from "eventemitter3";
 import { io } from "socket.io-client";
 import { Godot } from "./godot";
-import { apiClient, getUserColor, twitchAutoMSG } from "./twitch";
+import { apiClient, getUserColor, twitchAutoMSG, TwitchMessageSettings } from "./twitch";
 import { HelixUser } from "@twurple/api";
 import { MessageHelper } from "./messages";
 import axios, { AxiosInstance } from "axios";
@@ -105,10 +105,10 @@ ClientIO.onAny( async (eventName: string, spark, ...args) => {
 })
 
 BluStreamDB.on("birth", (spark) => { // Better fucking work...
-  twitchAutoMSG(`@${spark.user.displayName} Birthed new spark!`)
+  if (TwitchMessageSettings.autoMessagesEnabled) { twitchAutoMSG(`@${spark.user.displayName} created a new spark!`) }
   MessageHelper.add({
     header: spark.user.displayName,
-    content: "Birthed a Proto Spark!",
+    content: "Created a Proto Spark!",
     sound: "$spark_notif.wav",
     style: {
       header_color: spark.user.color,

@@ -1,6 +1,6 @@
 import EventEmitter from "eventemitter3";
 import { io, Socket } from "socket.io-client";
-import { fulfill, getUserBadges, getUserColor, twitchAutoMSG } from "./twitch";
+import { fulfill, getUserBadges, getUserColor, twitchAutoMSG, TwitchMessageSettings } from "./twitch";
 import { MessageHelper } from "./messages";
 import { EventSubChannelRedemptionAddEvent } from "@twurple/eventsub-base";
 import { chargeSpark, trackActivity } from "./blu_stream_db";
@@ -13,7 +13,7 @@ export class OmniMusicClass extends EventEmitter {
 
   constructor() {
     super()
-    this._socket = io("http://localhost:8080")
+    this._socket = io("http://localhost:8080/")
     this._socket.on("connect", () => {
       print("+ Omni Socket")
       this._socket.emit("$reg_nowplaying")
@@ -48,11 +48,17 @@ export class OmniMusicClass extends EventEmitter {
     return track
   }
 
+  async fetch_queue() {
+    var queue = await this._socket.emitWithAck("$stream_fetch_queue", [])
+    return (queue || [])
+  }
+
   async reduceVolume(id: string, volume = 0.1) {
     let theLowest = Object.values(this._active_lowers).every(val => (val == null || volume < val))
     this._active_lowers[id] = volume
 
     if (theLowest) {
+      // print("erm...", id, volume)
       this._socket.emit("$stream_set_volume", [volume])
     }
   }
@@ -76,7 +82,7 @@ export function getCurrentTrack() { return CurrentTrack }
 
 OmniMusic.on("nowplaying", event => {
   CurrentTrack = event.track
-  twitchAutoMSG(`Now Playing: ${CurrentTrack.title} - ${CurrentTrack.author.name}`)
+  if (TwitchMessageSettings.autoMessagesEnabled) { twitchAutoMSG(`Now Playing: ${CurrentTrack.title} - ${CurrentTrack.author.name}`) }
 
   MessageHelper.add({
     badges: ["./assets/icons/song.png"],

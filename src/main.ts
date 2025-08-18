@@ -27,6 +27,8 @@ import "./modules/omni" // Omni hookup & processing
 import "./modules/discord" // Discord Client hookup & processing
 import "./modules/hourglass" // Hourglass hookup & processing
 import "./modules/blubotai" // Hourglass hookup & processing
+import "./modules/end_screen" // Hourglass hookup & processing
+import "./modules/mouse_track" // Hourglass hookup & processing
 
 import { startWebServer } from './modules/web_server' // HTTP & WS Server configuration
 

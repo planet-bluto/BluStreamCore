@@ -19,7 +19,8 @@ export const Reward = new TwitchChannelPointReward(local_reward_id,
     isEnabled: true
   },
   async (event: EventSubChannelRedemptionAddEvent) => {
-    await BluBotAI.Say(`${event.userDisplayName} says "${event.input}"`)
+    // await BluBotAI.Say(`${event.userDisplayName} says "${event.input}"`)
+    await BluBotAI.Say(event.input)
 
     MessageHelper.add({
       badges: ["./assets/icons/blubot.png"],
