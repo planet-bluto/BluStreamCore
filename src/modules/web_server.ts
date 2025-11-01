@@ -2,6 +2,7 @@ import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import { setDiscordSocket } from './discord';
+import { setupTrackingSocket } from './tracking';
 
 export const app = express()
 const httpServer = createServer(app)
@@ -39,6 +40,10 @@ SocketIO.on('connection', (socket) => {
 
   socket.on("discord_identify", () => {
     setDiscordSocket(socket)
+  })
+
+  socket.on("sub_phone_tracking", () => {
+    setupTrackingSocket(socket)
   })
 })
 

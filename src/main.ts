@@ -28,7 +28,8 @@ import "./modules/discord" // Discord Client hookup & processing
 import "./modules/hourglass" // Hourglass hookup & processing
 import "./modules/blubotai" // Hourglass hookup & processing
 import "./modules/end_screen" // Hourglass hookup & processing
-import "./modules/mouse_track" // Hourglass hookup & processing
+import "./modules/mouse_track" // Mouse Tracking for monitor transitions
+import "./modules/tracking" // Head Tracking from Phone, lmao
 
 import { startWebServer } from './modules/web_server' // HTTP & WS Server configuration
 

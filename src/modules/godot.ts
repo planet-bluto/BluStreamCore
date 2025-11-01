@@ -97,6 +97,10 @@ class GodotClass extends EventEmitter {
     WssSend("omni_event", type, event)
   }
 
+  send_tracking_payload(payload: any) {
+    WssSend("tracking_payload", payload)
+  }
+
   getAdInfo() {
     var request_ind = this.AD_REQUESTS.length
     WssSend("current_ad_request", request_ind)
